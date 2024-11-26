@@ -7,7 +7,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
         // Tự động làm mới ghế sau mỗi 30 giây
         const interval = setInterval(() => {
             refreshSeats();
-        }, 30000);
+        }, 30000000);
 
         return () => clearInterval(interval); // Cleanup interval khi component unmount
     }, [refreshSeats]);

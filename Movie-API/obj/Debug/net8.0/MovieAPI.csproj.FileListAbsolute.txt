@@ -148,3 +148,4 @@ D:\ThucTap\MovieTicket\Movie\Movie-API\obj\Debug\net8.0\refint\MovieAPI.dll
 D:\ThucTap\MovieTicket\Movie\Movie-API\obj\Debug\net8.0\MovieAPI.pdb
 D:\ThucTap\MovieTicket\Movie\Movie-API\obj\Debug\net8.0\MovieAPI.genruntimeconfig.cache
 D:\ThucTap\MovieTicket\Movie\Movie-API\obj\Debug\net8.0\ref\MovieAPI.dll
+D:\ThucTap\MovieTicket\Movie\Movie-API\obj\Debug\net8.0\MovieAPI.sourcelink.json

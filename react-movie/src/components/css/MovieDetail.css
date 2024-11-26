@@ -1,27 +1,70 @@
+/* MovieDetail.css */
 .movie-detail {
+    background-image: url('https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/5830232153788/Dadi-Cinema-Malaysia-Movie-Voucher-b2d23a64-5d9f-4bf0-b0e5-1f2d81d8af13.jpeg?tr=q-60,c-at_max,w-1280,h-720&_src=imagekit');
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
     gap: 1rem;
+}
+.movie-detail::before{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 70%;
+    z-index: -1;
+    background-color: rgba(96, 70, 70, 0.3);
+}
+
+.movie-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #aaaaaa;
+    
+}
+
+.movie-image {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .movie-info {
-    text-align: left;
-    max-width: 600px;
-    width: 100%;
-}
-
-.date-selection, .showtime-list {
-    margin-top: 1rem;
-}
-
-.date-boxes, .showtime-boxes {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    max-width: 350px;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 100px;
+} 
+
+.movie-info p {
+    margin: 5px 0;
+    color: #aaaaaa;
 }
 
-.date-box, .showtime-box {
+.date-selection,
+.showtime-list {
+    margin-top: 1rem;
+    width: 100%;
+    color: #aaaaaa;
+    
+}
+
+.date-boxes,
+.showtime-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 10px;
+}
+
+.date-box,
+.showtime-box {
+    flex: 0 0 10%; /* Kích thước 10% */
     padding: 0.5rem 0.8rem;
     background-color: #f0f0f0;
     color: #333;
@@ -32,12 +75,14 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.date-box.selected, .showtime-box.selected {
+.date-box.selected,
+.showtime-box.selected {
     background-color: #333;
     color: #fff;
 }
 
-.date-box:hover, .showtime-box:hover {
+.date-box:hover,
+.showtime-box:hover {
     background-color: #e0e0e0;
 }
 
@@ -59,4 +104,13 @@
 
 .book-button.active:hover {
     background-color: #555;
+}
+
+.allbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-right: auto;
+    margin-top: 100px;
 }

@@ -53,6 +53,7 @@ function MovieList() {
 
     return (
         <div className="movie-list-container">
+            
             {/* Banner Section */}
             {bannerMovies.length > 0 && (
                 <div className="banner-container">
@@ -78,7 +79,7 @@ function MovieList() {
                     <button className="banner-control next" onClick={handleBannerNext}>❯</button>
                 </div>
             )}
-            <h1>Phim Đang Chiếu</h1>
+            <h1 className="h1">Phim Đang Chiếu</h1>
             {/* Movie List Section */}
             <div className="movie-list">
 
