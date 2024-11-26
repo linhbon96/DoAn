@@ -1,0 +1,62 @@
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.movie-info {
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.date-selection, .showtime-list {
+    margin-top: 1rem;
+}
+
+.date-boxes, .showtime-boxes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.date-box, .showtime-box {
+    padding: 0.5rem 0.8rem;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.date-box.selected, .showtime-box.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+.date-box:hover, .showtime-box:hover {
+    background-color: #e0e0e0;
+}
+
+.book-button {
+    margin-top: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+.book-button.active:hover {
+    background-color: #555;
+}

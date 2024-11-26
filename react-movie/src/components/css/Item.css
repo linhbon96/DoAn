@@ -1,0 +1,125 @@
+.item-manager {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.add-item-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-button:hover {
+    background-color: #555;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 45%;
+    background-color: #f9f9f9;
+}
+
+.item-card p {
+    margin: 0.5rem 0;
+}
+
+.edit-button, .delete-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #555;
+}
+
+.delete-button:hover {
+    background-color: #900;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.save-button, .cancel-button {
+    margin-top: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #555;
+}
+
+.cancel-button {
+    background-color: #bbb;
+    margin-left: 0.5rem;
+}
+
+.cancel-button:hover {
+    background-color: #999;
+}
+
+.error-message {
+    color: #900;
+    font-weight: bold;
+    margin-top: 1rem;
+}

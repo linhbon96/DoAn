@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Movie-API",
+    "\\Movie-API\\Controllers",
+    "\\Movie-API\\Migrations",
+    "\\react-movie",
+    "\\react-movie\\src",
+    "\\react-movie\\src\\components",
+    "\\react-movie\\src\\components\\css"
+  ],
+  "SelectedNode": "\\Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
+  "PreviewInSolutionExplorer": false
+}

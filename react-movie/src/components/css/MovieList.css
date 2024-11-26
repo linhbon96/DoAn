@@ -1,0 +1,262 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; 
+    justify-content: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.movie-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.showtimes {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.showtime-boxes {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.showtime-box {
+    padding: 0.5rem 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.showtime-box:hover {
+    background-color: #555;
+}
+
+.buy-ticket-button {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-ticket-button:hover {
+    background-color: #555;
+}
+/* Container Styles */
+.movie-list-container {
+    padding: 20px;
+}
+
+/* Banner Section */
+.banner-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: 30px;
+}
+.banner-container h1{
+    color: #f1f1f1;
+}
+
+.movie-banner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: white;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.banner-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.banner-content .buy-ticket-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 14px; 
+    padding: 5px; 
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    width: 30px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner-control.prev {
+    left: 10px;
+}
+
+.banner-control.next {
+    right: 10px;
+}
+
+/* Movie Card Section */
+.movie-container {
+    width: 800px; /* Chiều rộng cố định của hộp chứa */
+    height: 700px; /* Chiều cao cố định của hộp chứa */
+    overflow: auto; /* Tạo thanh cuộn nếu số lượng phim vượt quá kích thước của hộp */
+    border: 1px solid #ccc; /* Đường viền của hộp */
+    padding: 20px; /* Khoảng cách bên trong hộp */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho hộp */
+    border-radius: 10px; /* Đường viền cong của hộp */
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hiển thị các cột linh hoạt */
+    gap: 20px; /* Khoảng cách giữa các phim */
+    justify-items: center; /* Căn giữa các phần tử trong lưới */
+}
+
+.movie-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 200px; /* Chiều rộng cố định của thẻ phim */
+    height: 300px; /* Chiều cao cố định của thẻ phim */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các thành phần bên trong */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 67%; /* 2/3 chiều cao của thẻ phim */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ vùng ảnh */
+}
+
+.movie-card .content {
+    padding: 15px;
+    height: 33%; /* 1/3 chiều cao của thẻ phim */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-ticket-button {
+    margin-top: auto;
+    padding: 8px 12px;
+    border: none;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-cover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin: 5px 10px;
+    color: #555;
+}
+
+.buy-ticket-button {
+    display: block;
+    margin: 10px auto 15px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-ticket-button:hover {
+    background-color: #2980b9;
+}
+
+.movie-rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f39c12;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 50%;
+}

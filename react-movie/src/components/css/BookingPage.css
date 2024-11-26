@@ -1,0 +1,54 @@
+.booking-page {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+    .booking-page h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+.seat-selection {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .seat.selected {
+        background-color: #007bff;
+    }
+
+    .seat:hover {
+        background-color: #6c757d;
+    }
+
+.snacks-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.snack-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .snack-item:hover {
+        background-color: #f8f9fa;
+    }
