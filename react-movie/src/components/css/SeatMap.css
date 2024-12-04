@@ -47,32 +47,42 @@
 .seat:hover {
     transform: scale(1.1);
 }
-
-.seat.available {
-    background-color: #4caf50; /* Màu xanh cho ghế trống */
-    color: #fff;
+.seat.locked {
+    background-color: red;  /* Màu đỏ cho ghế bị khóa */
+    color: white;           /* Màu chữ trắng */
 }
 
 .seat.selected {
-    background-color: #fbc02d; /* Màu vàng cho ghế đang chọn */
-    color: #222;
+    background-color: #4caf50;  /* Màu xanh cho ghế đã chọn */
+    color: white;
+}
+
+.seat.available {
+    background-color: #f0ad4e;  /* Màu vàng cho ghế trống */
+    color: black;
 }
 
 .seat.booked {
-    background-color: #f44336; /* Màu đỏ cho ghế đã đặt */
-    color: #fff;
-    cursor: not-allowed;
-}
-
-.seat.locked {
-    background-color: #9e9e9e; /* Màu xám cho ghế bị khóa */
-    color: #fff;
-    cursor: not-allowed;
+    background-color: #d9534f;  /* Màu đỏ đậm cho ghế đã đặt */
+    color: white;
 }
 
 .seat.empty {
-    background-color: transparent;
-    cursor: default;
+    background-color: #e0e0e0;  /* Màu xám cho ghế không có sẵn */
+    color: black;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.screen-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .seat-legend {

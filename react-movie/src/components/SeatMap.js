@@ -30,7 +30,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
                         className={`seat ${
                             seat
                                 ? isLocked
-                                    ? 'locked'
+                                    ? 'locked'  // Ghế khóa sẽ có màu đỏ
                                     : seat.isAvailable
                                         ? isSelected
                                             ? 'selected'
@@ -49,6 +49,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
         }
         return seatRows;
     };
+
 
     return (
         <div className="seat-map">

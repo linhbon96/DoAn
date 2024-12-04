@@ -3,12 +3,13 @@
     "",
     "\\Movie-API",
     "\\Movie-API\\Controllers",
+    "\\Movie-API\\DTOs",
     "\\Movie-API\\Migrations",
     "\\react-movie",
     "\\react-movie\\src",
     "\\react-movie\\src\\components",
     "\\react-movie\\src\\components\\css"
   ],
-  "SelectedNode": "\\Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
+  "SelectedNode": "\\react-movie\\src\\components\\SeatMap.js",
   "PreviewInSolutionExplorer": false
 }

@@ -39,12 +39,19 @@ function TicketBooking() {
     const fetchSeats = async (showtimeId) => {
         try {
             const response = await axios.get(`http://localhost:5175/api/Seats/${showtimeId}`);
-            setSeats(response.data);
+            const updatedSeats = response.data.map((seat) => {
+                return {
+                    ...seat,
+                    isAvailable: seat.isAvailable && !seat.isBooked,
+                };
+            });
+            setSeats(updatedSeats);
         } catch (error) {
             console.error('Error fetching seats:', error);
             alert('Không thể tải danh sách ghế. Vui lòng thử lại!');
         }
     };
+
 
     const toggleSeatSelection = (seat) => {
         setSelectedSeats((prev) =>

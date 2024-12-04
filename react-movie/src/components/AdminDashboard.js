@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './css/AdminDashboard.css';  // Đảm bảo có file CSS cho AdminDashboard
+import './css/AdminDashboard.css';  
 
 function AdminDashboard() {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null); // Phim được chọn để chỉnh sửa
+  const [selectedMovie, setSelectedMovie] = useState(null); 
   const [updatedMovie, setUpdatedMovie] = useState({
     title: '',
     description: '',

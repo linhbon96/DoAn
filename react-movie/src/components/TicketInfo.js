@@ -7,8 +7,7 @@ function TicketInfo() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    // Giả sử UserId được lưu trong localStorage
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('userId'); // Giả sử UserId được lưu trong localStorage
 
     useEffect(() => {
         if (!userId) {
@@ -31,6 +30,12 @@ function TicketInfo() {
 
         fetchTicketInfos();
     }, [userId]);
+
+    const calculateTotal = (ticket) => {
+        const seatPrice = ticket.ticketPrice || 0; // Giá tiền vé
+        const itemTotal = ticket.itemOrders?.reduce((acc, item) => acc + (item.quantity * item.price || 0), 0) || 0;
+        return seatPrice + itemTotal;
+    };
 
     if (loading) {
         return <p>Đang tải thông tin vé...</p>;
@@ -60,14 +65,14 @@ function TicketInfo() {
                                     <ul>
                                         {ticket.itemOrders.map((item) => (
                                             <li key={item.itemId}>
-                                                {item.itemName} - Số lượng: {item.quantity}
+                                                {item.itemName} - Số lượng: {item.quantity} - Giá: {item.price?.toLocaleString()} VND
                                             </li>
                                         ))}
                                     </ul>
                                 ) : (
                                     <p>Không có đồ ăn kèm.</p>
                                 )}
-                                <p><strong>Tổng Tiền Đồ Ăn:</strong> {ticket.orderTotalAmount ? `${ticket.orderTotalAmount.toLocaleString()} VND` : '0 VND'}</p>
+                                <p><strong>Tổng Tiền (Vé + Đồ Ăn):</strong> {calculateTotal(ticket).toLocaleString()} VND</p>
                             </>
                         ) : (
                             <p>Không có đặt đồ ăn kèm.</p>
@@ -77,7 +82,6 @@ function TicketInfo() {
             </div>
         </div>
     );
-
 }
 
 export default TicketInfo;

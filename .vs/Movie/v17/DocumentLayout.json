@@ -3,208 +3,28 @@
   "WorkspaceRootPath": "D:\\ThucTap\\MovieTicket\\Movie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\SeatMap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\SeatMap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketBooking.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\TicketBooking.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Migrations\\20241107085916_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\OrdersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Controllers\\OrdersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\MovieController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Controllers\\MovieController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\SeatsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Controllers\\SeatsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\ItemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\Controllers\\ItemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ShowTimesController.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\ShowTimesController.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\SeatsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\SeatsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ShowTime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\ShowTime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Movie.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Movie.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ItemOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\ItemOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Models\\Theater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\TicketController.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\TicketController.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ReportController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\ReportController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\OrdersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\OrdersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\MovieController.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\MovieController.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ItemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Controllers\\ItemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Movie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\Movie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\NewFile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\NewFile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ItemDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\ItemDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TicketDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\TicketDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\SeatDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\SeatDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ShowtimeDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\ShowtimeDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\RevenueReportDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\RevenueReportDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\UserDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\UserDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TheaterDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\TheaterDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\MovieDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\DTOs\\MovieDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketInfo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\TicketInfo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\css\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\Navbar.js||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\Navbar.js||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\BookingPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\BookingPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\MovieDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\MovieList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\TicketInfo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\css\\TicketInfo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\BookingPage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\css\\BookingPage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\css\\MovieDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieList.css||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\components\\css\\MovieList.css||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\services\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\services\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\LoginPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\pages\\LoginPage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\AdminDashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\pages\\AdminDashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\HomePage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-movie\\src\\pages\\HomePage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie\\bin\\NewFile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie\\bin\\NewFile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\DTOs\\ItemDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Movie-API\\DTOs\\ItemDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -214,58 +34,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241107085916_InitialCreate.Designer.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
-              "RelativeToolTip": "Movie-API\\Migrations\\20241107085916_InitialCreate.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:30:01.563Z",
+              "DocumentIndex": 1,
+              "Title": "TicketBooking.js",
+              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketBooking.js",
+              "RelativeDocumentMoniker": "react-movie\\src\\components\\TicketBooking.js",
+              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketBooking.js",
+              "RelativeToolTip": "react-movie\\src\\components\\TicketBooking.js",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAHgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-03T08:14:31.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Movie-API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:29:31.182Z",
+              "DocumentIndex": 0,
+              "Title": "SeatMap.js",
+              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\SeatMap.js",
+              "RelativeDocumentMoniker": "react-movie\\src\\components\\SeatMap.js",
+              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\SeatMap.js*",
+              "RelativeToolTip": "react-movie\\src\\components\\SeatMap.js*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-03T08:13:42.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20241107085916_InitialCreate.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Movie-API\\Migrations\\20241107085916_InitialCreate.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Migrations\\20241107085916_InitialCreate.cs",
-              "RelativeToolTip": "Movie-API\\Migrations\\20241107085916_InitialCreate.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Movie-API\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Movie-API\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:29:14.473Z",
+              "WhenOpened": "2024-12-03T08:12:58.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Movie-API\\Controllers\\MovieController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Movie-API\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Title": "SeatsController.cs",
+              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\SeatsController.cs",
+              "RelativeDocumentMoniker": "Movie-API\\Controllers\\SeatsController.cs",
+              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\SeatsController.cs",
+              "RelativeToolTip": "Movie-API\\Controllers\\SeatsController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAYwKYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:26:35.399Z",
+              "WhenOpened": "2024-12-03T08:12:10.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ItemDTO.cs",
+              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\DTOs\\ItemDTO.cs",
+              "RelativeDocumentMoniker": "Movie-API\\DTOs\\ItemDTO.cs",
+              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\DTOs\\ItemDTO.cs",
+              "RelativeToolTip": "Movie-API\\DTOs\\ItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:09:46.28Z",
               "EditorCaption": ""
             },
             {
@@ -276,577 +109,10 @@
               "RelativeDocumentMoniker": "Movie-API\\Controllers\\ItemController.cs",
               "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie-API\\Controllers\\ItemController.cs",
               "RelativeToolTip": "Movie-API\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:26:32.644Z",
+              "WhenOpened": "2024-12-03T08:05:03.391Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ItemOrder.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ItemOrder.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\ItemOrder.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ItemOrder.cs",
-              "RelativeToolTip": "Movie\\Models\\ItemOrder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:21:42.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Movie.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Movie.cs",
-              "RelativeToolTip": "Movie\\Models\\Movie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:30:17.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ShowTime.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ShowTime.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\ShowTime.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\ShowTime.cs",
-              "RelativeToolTip": "Movie\\Models\\ShowTime.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:31:41.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Seat.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Seat.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Seat.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Seat.cs",
-              "RelativeToolTip": "Movie\\Models\\Seat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:36:29.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Ticket.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Ticket.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Ticket.cs",
-              "RelativeToolTip": "Movie\\Models\\Ticket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:46:59.567Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SeatsController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\SeatsController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\SeatsController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\SeatsController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\SeatsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:39:11.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:46:44.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Movie\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Movie\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:31:14.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Order.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Order.cs",
-              "RelativeToolTip": "Movie\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:36:57.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Program.cs",
-              "RelativeDocumentMoniker": "Movie\\Program.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Program.cs",
-              "RelativeToolTip": "Movie\\Program.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:33:08.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShowTimesController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ShowTimesController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\ShowTimesController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ShowTimesController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\ShowTimesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:38:44.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Item.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Item.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Item.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Item.cs",
-              "RelativeToolTip": "Movie\\Models\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:37:08.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Theater.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Theater.cs",
-              "RelativeDocumentMoniker": "Movie\\Models\\Theater.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Models\\Theater.cs",
-              "RelativeToolTip": "Movie\\Models\\Theater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:31:15.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\ReportController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:43:31.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\OrdersController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:39:28.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\MovieController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:37:43.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ItemController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ItemController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\ItemController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\ItemController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:24:12.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Movie.csproj",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Movie.csproj",
-              "RelativeDocumentMoniker": "Movie\\Movie.csproj",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Movie.csproj",
-              "RelativeToolTip": "Movie\\Movie.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-04T08:37:40.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TicketController.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\TicketController.cs",
-              "RelativeDocumentMoniker": "Movie\\Controllers\\TicketController.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\Controllers\\TicketController.cs",
-              "RelativeToolTip": "Movie\\Controllers\\TicketController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T03:47:16.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "NewFile",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\NewFile",
-              "RelativeDocumentMoniker": "Movie\\NewFile",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\NewFile",
-              "RelativeToolTip": "Movie\\NewFile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-04T08:31:01.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ItemDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ItemDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\ItemDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ItemDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\ItemDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:13:16.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "TicketDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TicketDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\TicketDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TicketDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\TicketDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:11:30.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SeatDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\SeatDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\SeatDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\SeatDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\SeatDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:11:19.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RevenueReportDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\RevenueReportDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\RevenueReportDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\RevenueReportDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\RevenueReportDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:12:47.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\UserDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\UserDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\UserDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:13:41.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ShowtimeDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ShowtimeDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\ShowtimeDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\ShowtimeDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\ShowtimeDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:11:07.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "TheaterDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TheaterDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\TheaterDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\TheaterDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\TheaterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:10:54.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MovieDTO.cs",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\MovieDTO.cs",
-              "RelativeDocumentMoniker": "Movie\\DTOs\\MovieDTO.cs",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\DTOs\\MovieDTO.cs",
-              "RelativeToolTip": "Movie\\DTOs\\MovieDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:10:38.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\appsettings.json",
-              "RelativeDocumentMoniker": "Movie\\appsettings.json",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\appsettings.json",
-              "RelativeToolTip": "Movie\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-04T07:06:13.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "TicketInfo.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\TicketInfo.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\css\\TicketInfo.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\TicketInfo.css",
-              "RelativeToolTip": "react-movie\\src\\components\\css\\TicketInfo.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T07:00:01.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "BookingPage.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\BookingPage.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\css\\BookingPage.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\BookingPage.css",
-              "RelativeToolTip": "react-movie\\src\\components\\css\\BookingPage.css",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvzYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T06:59:47.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MovieDetail.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieDetail.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\css\\MovieDetail.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieDetail.css",
-              "RelativeToolTip": "react-movie\\src\\components\\css\\MovieDetail.css",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvyMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T06:59:33.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MovieList.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieList.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\css\\MovieList.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\MovieList.css",
-              "RelativeToolTip": "react-movie\\src\\components\\css\\MovieList.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T06:58:57.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Navbar.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\Navbar.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\css\\Navbar.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\css\\Navbar.css",
-              "RelativeToolTip": "react-movie\\src\\components\\css\\Navbar.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T06:58:42.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "App.css",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.css",
-              "RelativeDocumentMoniker": "react-movie\\src\\App.css",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.css",
-              "RelativeToolTip": "react-movie\\src\\App.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T04:46:53.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "TicketInfo.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketInfo.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\TicketInfo.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\TicketInfo.js",
-              "RelativeToolTip": "react-movie\\src\\components\\TicketInfo.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:43:29.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BookingPage.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\BookingPage.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\BookingPage.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\BookingPage.js",
-              "RelativeToolTip": "react-movie\\src\\components\\BookingPage.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:43:21.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "MovieDetail.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieDetail.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\MovieDetail.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieDetail.js",
-              "RelativeToolTip": "react-movie\\src\\components\\MovieDetail.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:43:10.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "MovieList.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieList.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\MovieList.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\MovieList.js",
-              "RelativeToolTip": "react-movie\\src\\components\\MovieList.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:43:07.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Navbar.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\Navbar.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\components\\Navbar.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\components\\Navbar.js",
-              "RelativeToolTip": "react-movie\\src\\components\\Navbar.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:41:28.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "App.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\App.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\App.js",
-              "RelativeToolTip": "react-movie\\src\\App.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:43:43.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "api.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\services\\api.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\services\\api.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\services\\api.js",
-              "RelativeToolTip": "react-movie\\src\\services\\api.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:42:47.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "LoginPage.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\LoginPage.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\pages\\LoginPage.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\LoginPage.js",
-              "RelativeToolTip": "react-movie\\src\\pages\\LoginPage.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:42:40.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "AdminDashboard.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\AdminDashboard.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\pages\\AdminDashboard.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\AdminDashboard.js",
-              "RelativeToolTip": "react-movie\\src\\pages\\AdminDashboard.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:42:32.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "HomePage.js",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\HomePage.js",
-              "RelativeDocumentMoniker": "react-movie\\src\\pages\\HomePage.js",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\react-movie\\src\\pages\\HomePage.js",
-              "RelativeToolTip": "react-movie\\src\\pages\\HomePage.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-04T04:42:20.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "NewFile",
-              "DocumentMoniker": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\bin\\NewFile",
-              "RelativeDocumentMoniker": "Movie\\bin\\NewFile",
-              "ToolTip": "D:\\ThucTap\\MovieTicket\\Movie\\Movie\\bin\\NewFile",
-              "RelativeToolTip": "Movie\\bin\\NewFile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-04T03:38:17.001Z"
             }
           ]
         }

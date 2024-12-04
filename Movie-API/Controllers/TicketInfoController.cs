@@ -25,13 +25,15 @@ namespace MovieBookingApp.Controllers
         {
             var ticketInfos = await _context.TicketInfos
                 .Include(ti => ti.Ticket)
-                .Include(ti => ti.User)
-                .Where(ti => ti.UserId == userId)
+                .ThenInclude(t => t.Movie) // Liên kết từ Ticket tới Movie
+                .Include(ti => ti.User) // Bao gồm thông tin User
+                .Where(ti => ti.UserId == userId) // Lọc theo UserId
                 .ToListAsync();
 
             if (!ticketInfos.Any())
                 return NotFound(new { Message = "No ticket information found for the specified user." });
 
+            // Chuyển đổi sang DTO
             var ticketInfoDTOs = ticketInfos.Select(ti => new TicketInfoDTO
             {
                 TicketInfoId = ti.TicketInfoId,
@@ -39,8 +41,8 @@ namespace MovieBookingApp.Controllers
                 OrderId = ti.OrderId,
                 UserId = ti.UserId,
                 UserName = ti.User?.Username,
-                TicketDetails = ti.Ticket != null 
-                    ? $"Ticket ID: {ti.Ticket.TicketId}" 
+                TicketDetails = ti.Ticket != null
+                    ? $"Ticket ID: {ti.Ticket.TicketId} | Movie: {ti.Ticket.Movie?.Title} | Genre: {ti.Ticket.Movie?.Genre} | Showtime: {ti.Ticket.Movie?.ReleaseDate:yyyy-MM-dd}"
                     : null
             });
 
