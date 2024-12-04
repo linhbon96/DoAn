@@ -42,7 +42,7 @@ namespace MovieBookingApp.Controllers
                 if (orderDTO.Tickets != null && orderDTO.Tickets.Any())
                 {
                     await CreateTicketsAndTicketInfoAsync(orderDTO.Tickets, newOrder.Id, orderDTO.UserId);
-                }
+                } 
 
                 return CreatedAtAction(nameof(GetOrderById), new { id = newOrder.Id }, new { newOrder.Id });
             }
@@ -98,6 +98,7 @@ namespace MovieBookingApp.Controllers
                     .FirstOrDefaultAsync(s => s.ShowtimeId == ticketDTO.ShowtimeId);
 
                 if (showtime == null || showtime.Movie == null || showtime.Theater == null)
+
                 {
                     throw new Exception($"Invalid showtimeId {ticketDTO.ShowtimeId}, movieId, or theaterId not found.");
                 }
