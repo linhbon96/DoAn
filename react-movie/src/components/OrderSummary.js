@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useAuth } from './AuthContext'; // Import AuthContext để lấy UserId
+import { useAuth } from './AuthContext';
 import './css/OrderSummary.css';
 
 function OrderSummary() {
@@ -9,7 +9,7 @@ function OrderSummary() {
     const navigate = useNavigate();
     const { selectedSeats = [], movieId, showtime } = location.state || {};
 
-    const { userId } = useAuth(); // Lấy UserId từ AuthContext
+    const { userId } = useAuth();
 
     const [items, setItems] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
@@ -102,14 +102,20 @@ function OrderSummary() {
             showtimeId: showtime.showtimeId,
             seatId: seat.seatId,
             price: seatPrice,
+            userId, // Thêm userId vào từng vé
+            movieId,
+            theaterId: showtime.theaterId, // Lấy theaterId từ showtime
         }));
 
-        const itemOrders = selectedItems.filter((item) => item.quantity > 0);
+        const itemOrders = selectedItems.filter((item) => item.quantity > 0).map((item) => ({
+            itemId: item.itemId,
+            quantity: item.quantity,
+        }));
 
         const orderData = {
-            userId, // Lấy từ AuthContext
-            tickets: ticketData.length > 0 ? ticketData : null,
-            itemOrders: itemOrders.length > 0 ? itemOrders : null,
+            userId,
+            tickets: ticketData,
+            itemOrders,
         };
 
         try {

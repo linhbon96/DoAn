@@ -6,6 +6,7 @@ namespace MovieBookingApp.Models
         public int TicketId { get; set; }
         public int? OrderId { get; set; }
         public int? UserId { get; set; }
+     
 
         // Navigation properties
         public Ticket Ticket { get; set; }

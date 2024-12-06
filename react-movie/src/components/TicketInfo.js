@@ -18,7 +18,7 @@ function TicketInfo() {
 
         const fetchTicketInfos = async () => {
             try {
-                const response = await axios.get(`http://localhost:5175/api/TicketInfo/${userId}`);
+                const response = await axios.get(`http://localhost:5175/api/TicketInfo/user/${userId}`);
                 setTicketInfos(response.data);
             } catch (error) {
                 console.error('Error fetching ticket info:', error);
@@ -55,7 +55,7 @@ function TicketInfo() {
             <div className="ticket-grid">
                 {ticketInfos.map((ticket) => (
                     <div key={ticket.ticketInfoId} className="ticket-item">
-                        <p><strong>Phim:</strong> {ticket.movieTitle || 'Không xác định'}</p>
+                        <p><strong>Ghế:</strong> {ticket.row}{ticket.number}</p>
                         <p><strong>Người Đặt:</strong> {ticket.userName || 'Không xác định'}</p>
                         <p><strong>Chi Tiết Vé:</strong> {ticket.ticketDetails || 'Không xác định'}</p>
                         {ticket.orderId ? (

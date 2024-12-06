@@ -14,6 +14,7 @@ namespace MovieBookingApp.Models.DTOs
     {
         public int ItemId { get; set; }
         public int Quantity { get; set; }
+        public int OrderId { get; set; }
     }
 
     // DTO cho phản hồi của ItemOrder

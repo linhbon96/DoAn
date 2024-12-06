@@ -6,10 +6,14 @@ namespace MovieBookingApp.Models.DTOs
         public int TicketId { get; set; }
         public int? OrderId { get; set; }
         public int? UserId { get; set; }
-
-        // Các thông tin chi tiết khác nếu cần
-        public string UserName { get; set; } // Nếu cần hiển thị tên người dùng
-        public string TicketDetails { get; set; } // Nếu cần hiển thị chi tiết vé
+        public int SeatId { get; set; }
+        public string Row { get; set; }
+        public int Number { get; set; }
+        public string UserName { get; set; }
+        public string TicketDetails { get; set; }
+        public string MovieTitle { get; set; }
+        public string Genre { get; set; }
+        public DateTime? ReleaseDate { get; set; }
     }
 
     public class TicketInfoCreateDTO
@@ -17,5 +21,6 @@ namespace MovieBookingApp.Models.DTOs
         public int TicketId { get; set; }
         public int? OrderId { get; set; }
         public int? UserId { get; set; }
+        public int SeatId { get; set; }
     }
 }

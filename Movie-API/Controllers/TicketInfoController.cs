@@ -20,20 +20,21 @@ namespace MovieBookingApp.Controllers
         }
 
         // Get ticket infos by UserId
-        [HttpGet("{userId}")]
+        [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetTicketInfosByUserId(int userId)
         {
             var ticketInfos = await _context.TicketInfos
                 .Include(ti => ti.Ticket)
-                .ThenInclude(t => t.Movie) // Liên kết từ Ticket tới Movie
-                .Include(ti => ti.User) // Bao gồm thông tin User
-                .Where(ti => ti.UserId == userId) // Lọc theo UserId
+                    .ThenInclude(t => t.Seat) // Lấy thông tin ghế từ Ticket
+                .Include(ti => ti.Ticket)
+                    .ThenInclude(t => t.Movie) // Lấy thông tin phim từ Ticket
+                .Include(ti => ti.User) // Lấy thông tin người dùng
+                .Where(ti => ti.UserId == userId)
                 .ToListAsync();
 
             if (!ticketInfos.Any())
                 return NotFound(new { Message = "No ticket information found for the specified user." });
 
-            // Chuyển đổi sang DTO
             var ticketInfoDTOs = ticketInfos.Select(ti => new TicketInfoDTO
             {
                 TicketInfoId = ti.TicketInfoId,
@@ -41,21 +42,30 @@ namespace MovieBookingApp.Controllers
                 OrderId = ti.OrderId,
                 UserId = ti.UserId,
                 UserName = ti.User?.Username,
+                SeatId = ti.Ticket?.SeatId ?? 0,
+                Row = ti.Ticket?.Seat?.Row,
+                Number = ti.Ticket?.Seat?.Number ?? 0,
                 TicketDetails = ti.Ticket != null
-                    ? $"Ticket ID: {ti.Ticket.TicketId} | Movie: {ti.Ticket.Movie?.Title} | Genre: {ti.Ticket.Movie?.Genre} | Showtime: {ti.Ticket.Movie?.ReleaseDate:yyyy-MM-dd}"
-                    : null
-            });
+                    ? $"Ticket ID: {ti.Ticket.TicketId} | Seat: {ti.Ticket.Seat?.Row}{ti.Ticket.Seat?.Number}"
+                    : null,
+                MovieTitle = ti.Ticket?.Movie?.Title,
+                Genre = ti.Ticket?.Movie?.Genre,
+                ReleaseDate = ti.Ticket?.Movie?.ReleaseDate
+            }).ToList();
 
             return Ok(ticketInfoDTOs);
         }
 
         // Get ticket info by TicketInfoId
-        [HttpGet("details/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetTicketInfoById(int id)
         {
             var ticketInfo = await _context.TicketInfos
                 .Include(ti => ti.Ticket)
-                .Include(ti => ti.User)
+                    .ThenInclude(t => t.Seat) // Lấy thông tin ghế từ Ticket
+                .Include(ti => ti.Ticket)
+                    .ThenInclude(t => t.Movie) // Lấy thông tin phim từ Ticket
+                .Include(ti => ti.User) // Lấy thông tin người dùng
                 .FirstOrDefaultAsync(ti => ti.TicketInfoId == id);
 
             if (ticketInfo == null)
@@ -68,9 +78,15 @@ namespace MovieBookingApp.Controllers
                 OrderId = ticketInfo.OrderId,
                 UserId = ticketInfo.UserId,
                 UserName = ticketInfo.User?.Username,
-                TicketDetails = ticketInfo.Ticket != null 
-                    ? $"Ticket ID: {ticketInfo.Ticket.TicketId}" 
-                    : null
+                SeatId = ticketInfo.Ticket?.SeatId ?? 0,
+                Row = ticketInfo.Ticket?.Seat?.Row,
+                Number = ticketInfo.Ticket?.Seat?.Number ?? 0,
+                TicketDetails = ticketInfo.Ticket != null
+                    ? $"Ticket ID: {ticketInfo.Ticket.TicketId} | Seat: {ticketInfo.Ticket.Seat?.Row}{ticketInfo.Ticket.Seat?.Number}"
+                    : null,
+                MovieTitle = ticketInfo.Ticket?.Movie?.Title,
+                Genre = ticketInfo.Ticket?.Movie?.Genre,
+                ReleaseDate = ticketInfo.Ticket?.Movie?.ReleaseDate
             };
 
             return Ok(ticketInfoDTO);
@@ -80,7 +96,6 @@ namespace MovieBookingApp.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateTicketInfo([FromBody] TicketInfoCreateDTO ticketInfoCreateDTO)
         {
-            // Kiểm tra nếu Ticket hoặc Order không tồn tại
             var ticketExists = await _context.Tickets.AnyAsync(t => t.TicketId == ticketInfoCreateDTO.TicketId);
             if (!ticketExists)
                 return BadRequest(new { Message = "Invalid TicketId." });

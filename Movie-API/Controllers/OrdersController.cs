@@ -60,7 +60,8 @@ namespace MovieBookingApp.Controllers
                 ItemOrders = orderDTO.ItemOrders?.Select(io => new ItemOrder
                 {
                     ItemId = io.ItemId,
-                    Quantity = io.Quantity
+                    Quantity = io.Quantity,
+                    OrderId = io.OrderId
                 }).ToList() ?? new List<ItemOrder>()
             };
 

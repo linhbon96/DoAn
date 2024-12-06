@@ -105,13 +105,15 @@ namespace MovieBookingApp.Data
                 .HasForeignKey(t => t.ShowtimeId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-
+			//
             // TicketInfo Configuration
             modelBuilder.Entity<TicketInfo>()
                 .HasOne(ti => ti.Ticket)
                 .WithMany(t => t.TicketInfos)
                 .HasForeignKey(ti => ti.TicketId)
                 .OnDelete(DeleteBehavior.NoAction);
+			
+			
 
             modelBuilder.Entity<TicketInfo>()
                 .HasOne(ti => ti.Order)
