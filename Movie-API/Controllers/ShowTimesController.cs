@@ -84,7 +84,7 @@ public class ShowtimesController : ControllerBase
         {
             seats.Add(new Seat
             {
-                Row = ((char)('A' + row)).ToString(), // Hàng A, B, C...
+                Row = ((char)('A' + row)).ToString(), 
                 Number = col,
                 IsAvailable = true,
                 ShowTimeId = showtimeId
@@ -131,7 +131,6 @@ public class ShowtimesController : ControllerBase
         {
             return NotFound();
         }
-
         _context.ShowTimes.Remove(showtime);
         await _context.SaveChangesAsync();
 

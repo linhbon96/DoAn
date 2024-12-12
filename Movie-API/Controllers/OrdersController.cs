@@ -84,7 +84,7 @@ namespace MovieBookingApp.Controllers
 
         private async Task CreateTicketsAndTicketInfoAsync(IEnumerable<TicketCreateDTO> tickets, int orderId, int userId)
         {
-            // Kiểm tra xem UserId có tồn tại trong bảng Users không
+            // Validate UserId
             var userExists = await _context.Users.AnyAsync(u => u.UserId == userId);
             if (!userExists)
             {
@@ -99,7 +99,6 @@ namespace MovieBookingApp.Controllers
                     .FirstOrDefaultAsync(s => s.ShowtimeId == ticketDTO.ShowtimeId);
 
                 if (showtime == null || showtime.Movie == null || showtime.Theater == null)
-
                 {
                     throw new Exception($"Invalid showtimeId {ticketDTO.ShowtimeId}, movieId, or theaterId not found.");
                 }
@@ -117,7 +116,6 @@ namespace MovieBookingApp.Controllers
                 _context.Tickets.Add(newTicket);
                 await _context.SaveChangesAsync();
 
-                // Tạo TicketInfo
                 var newTicketInfo = new TicketInfo
                 {
                     TicketId = newTicket.TicketId,
@@ -127,11 +125,12 @@ namespace MovieBookingApp.Controllers
 
                 _context.TicketInfos.Add(newTicketInfo);
 
-                // Cập nhật trạng thái ghế
+                // Update Seat status and OrderId
                 var seat = await _context.Seats.FirstOrDefaultAsync(s => s.Id == ticketDTO.SeatId);
                 if (seat != null)
                 {
-                    seat.IsAvailable = false; // Đánh dấu ghế là đã đặt
+                    seat.IsAvailable = false;
+                    seat.OrderId = orderId; // Set OrderId for the seat
                     _context.Seats.Update(seat);
                 }
             }
@@ -140,10 +139,12 @@ namespace MovieBookingApp.Controllers
         }
 
 
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOrderById(int id)
         {
             var order = await _context.Orders
+                .Include(o => o.Seats) // Include Seats
                 .Include(o => o.ItemOrders)
                 .ThenInclude(io => io.Item)
                 .FirstOrDefaultAsync(o => o.Id == id);
@@ -163,11 +164,19 @@ namespace MovieBookingApp.Controllers
                     ItemId = io.ItemId,
                     Quantity = io.Quantity,
                     ItemName = io.Item.Name
+                }).ToList(),
+                Seats = order.Seats.Select(s => new SeatDTO
+                {
+                    SeatId = s.Id,
+                    OrderId = s.OrderId
                 }).ToList()
             };
 
             return Ok(orderResponse);
         }
+
+
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)

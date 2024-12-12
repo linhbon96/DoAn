@@ -36,13 +36,14 @@ namespace MovieBookingApp.Models.DTOs
 
 
     // DTO cho phản hồi của Order
-    public class OrderResponseDTO
-    {
-        public int Id { get; set; }
-        public DateTime OrderDate { get; set; }
-        public decimal TotalAmount { get; set; }
-        public List<ItemOrderResponseDTO> ItemOrders { get; set; }
-    }
+public class OrderResponseDTO
+{
+    public int Id { get; set; }
+    public DateTime OrderDate { get; set; }
+    public decimal TotalAmount { get; set; }
+    public List<ItemOrderResponseDTO> ItemOrders { get; set; }
+    public List<SeatDTO> Seats { get; set; }
+}
 
     // DTO đầy đủ của Order (nếu cần cả thông tin chi tiết và sửa đổi)
     public class OrderDTO

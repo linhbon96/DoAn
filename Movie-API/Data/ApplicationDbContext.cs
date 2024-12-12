@@ -82,6 +82,11 @@ namespace MovieBookingApp.Data
                 .WithOne(io => io.Order)
                 .HasForeignKey(io => io.OrderId)
                 .OnDelete(DeleteBehavior.Cascade);
+		 modelBuilder.Entity<Order>()
+       		.HasMany(o => o.Seats)
+        	.WithOne(s => s.Order)
+        	.HasForeignKey(s => s.OrderId)
+        	.OnDelete(DeleteBehavior.ClientSetNull);
 
             // Ticket Configuration
             modelBuilder.Entity<Ticket>()

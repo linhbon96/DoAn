@@ -10,5 +10,8 @@ namespace MovieBookingApp.Models
         public DateTime? LockedUntil { get; set; }
         public int ShowTimeId { get; set; }
         public Showtime ShowTime { get; set; }
+
+		public int? OrderId { get; set; }
+		public Order Order { get; set; }
     }
 }

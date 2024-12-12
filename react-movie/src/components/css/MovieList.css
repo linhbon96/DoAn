@@ -174,7 +174,7 @@ h1{
 /* Movie Card Section */
 .movie-container {
     background-image: url('D:/ThucTap/MovieTicket/Movie/react-movie/public/img/BG.jpg');
-    width: 800px; /* Chiều rộng cố định của hộp chứa */
+    width: 1000px; /* Chiều rộng cố định của hộp chứa */
     height: 700px; /* Chiều cao cố định của hộp chứa */
     overflow: auto; /* Tạo thanh cuộn nếu số lượng phim vượt quá kích thước của hộp */
     border: 1px solid #ccc; /* Đường viền của hộp */

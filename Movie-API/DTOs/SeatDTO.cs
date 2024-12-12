@@ -8,7 +8,7 @@ namespace MovieBookingApp.Models.DTOs
         public bool IsAvailable { get; set; }
         public bool IsLocked { get; set; } 
         public DateTime? LockedUntil { get; set; }
-
+		public int? OrderId { get; set; }
         public int ShowTimeId { get; set; } 
         public ShowtimeDTO ShowTime { get; set; }
     }
