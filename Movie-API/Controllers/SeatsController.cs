@@ -156,7 +156,7 @@ public async Task<IActionResult> GetSeats(int showTimeId)
 
     // Check if the seats are available for the specific showtime (for reserved tickets)
     [HttpPost("CheckSeats")]
-    public async Task<IActionResult> CheckSeats([FromBody] SeatCheckDTO seatCheckDTO)
+    public async Task<IActionResult> CheckSeats([FromBody] SeatCheckRequest seatCheckDTO)
     {
         if (seatCheckDTO == null || seatCheckDTO.SeatIds == null || seatCheckDTO.SeatIds.Count == 0)
         {

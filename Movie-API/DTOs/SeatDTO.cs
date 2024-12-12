@@ -12,10 +12,19 @@ namespace MovieBookingApp.Models.DTOs
         public int ShowTimeId { get; set; } 
         public ShowtimeDTO ShowTime { get; set; }
     }
-    public class SeatCheckDTO
+    public class SeatCheckRequest
     {
         public int ShowtimeId { get; set; }
         public List<int> SeatIds { get; set; }
     }
+
+
+
+// SeatAvailabilityResponseDto.cs
+public class SeatAvailabilityResponseDto
+{
+    public List<int> UnavailableSeats { get; set; }
+    public string Message { get; set; }
+}
 
 }

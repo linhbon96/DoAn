@@ -141,39 +141,39 @@ namespace MovieBookingApp.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById(int id)
+public async Task<IActionResult> GetOrderById(int id)
+{
+    var order = await _context.Orders
+        .Include(o => o.Seats) // Include Seats
+        .Include(o => o.ItemOrders)
+        .ThenInclude(io => io.Item)
+        .FirstOrDefaultAsync(o => o.Id == id);
+
+    if (order == null)
+    {
+        return NotFound(new { Message = "Order not found." });
+    }
+
+    var orderResponse = new OrderResponseDTO
+    {
+        Id = order.Id,
+        OrderDate = order.OrderDate,
+        TotalAmount = order.TotalAmount,
+        ItemOrders = order.ItemOrders.Select(io => new ItemOrderResponseDTO
         {
-            var order = await _context.Orders
-                .Include(o => o.Seats) // Include Seats
-                .Include(o => o.ItemOrders)
-                .ThenInclude(io => io.Item)
-                .FirstOrDefaultAsync(o => o.Id == id);
+            ItemId = io.ItemId,
+            Quantity = io.Quantity,
+            ItemName = io.Item.Name
+        }).ToList(),
+        Seats = order.Seats.Select(s => new SeatDTO
+        {
+            SeatId = s.Id,
+            OrderId = s.OrderId
+        }).ToList()
+    };
 
-            if (order == null)
-            {
-                return NotFound(new { Message = "Order not found." });
-            }
-
-            var orderResponse = new OrderResponseDTO
-            {
-                Id = order.Id,
-                OrderDate = order.OrderDate,
-                TotalAmount = order.TotalAmount,
-                ItemOrders = order.ItemOrders.Select(io => new ItemOrderResponseDTO
-                {
-                    ItemId = io.ItemId,
-                    Quantity = io.Quantity,
-                    ItemName = io.Item.Name
-                }).ToList(),
-                Seats = order.Seats.Select(s => new SeatDTO
-                {
-                    SeatId = s.Id,
-                    OrderId = s.OrderId
-                }).ToList()
-            };
-
-            return Ok(orderResponse);
-        }
+    return Ok(orderResponse);
+}
 
 
 
