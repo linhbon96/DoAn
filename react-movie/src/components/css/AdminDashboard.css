@@ -13,7 +13,7 @@ body {
   width: 300px;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #FF4500; /* Màu cam đậm */
+  border: 2px solid #FF4500; 
   border-radius: 20px;
   outline: none;
   transition: all 0.3s ease;

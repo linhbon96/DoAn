@@ -3,13 +3,14 @@
     "",
     "\\Movie-API",
     "\\Movie-API\\Controllers",
-    "\\Movie-API\\DTOs",
     "\\Movie-API\\Migrations",
+    "\\Movie-API\\Models",
+    "\\Movie-API\\obj",
     "\\react-movie",
     "\\react-movie\\src",
     "\\react-movie\\src\\components",
     "\\react-movie\\src\\components\\css"
   ],
-  "SelectedNode": "\\react-movie\\src\\components\\SeatMap.js",
+  "SelectedNode": "\\Movie-API\\Controllers\\TicketController.cs",
   "PreviewInSolutionExplorer": false
 }
