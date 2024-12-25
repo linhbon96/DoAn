@@ -9,7 +9,8 @@ namespace MovieBookingApp.Models.DTOs
         public string TheaterName { get; set; }
         public DateTime ShowDate { get; set; } // Chỉ lưu ngày
         public TimeSpan ShowHour { get; set; } // Chỉ lưu giờ
-         public List<SeatDTO> Seats { get; set; } = new List<SeatDTO>();
+        public List<SeatDTO> Seats { get; set; } = new List<SeatDTO>();
+        
     }
 
     public class ShowtimeCreateDTO
@@ -18,5 +19,6 @@ namespace MovieBookingApp.Models.DTOs
         public int TheaterId { get; set; }
         public DateTime ShowDate { get; set; } // Ngày của buổi chiếu
         public TimeSpan ShowHour { get; set; } // Giờ chiếu của buổi chiếu
+        public bool IsActive { get; set; } = true; // Mặc định là true
     }
 }

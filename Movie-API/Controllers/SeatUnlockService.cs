@@ -1,11 +1,9 @@
 using MovieBookingApp.Data;
 
-
 public class SeatUnlockService : IHostedService, IDisposable
 {
     private Timer _timer;
     private readonly IServiceScopeFactory _scopeFactory;
-
 
     public SeatUnlockService(IServiceScopeFactory scopeFactory)
     {
@@ -14,7 +12,7 @@ public class SeatUnlockService : IHostedService, IDisposable
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _timer = new Timer(UnlockExpiredSeats, null, TimeSpan.Zero, TimeSpan.FromSeconds(10)); // Runs every 10 seconds
+        _timer = new Timer(UnlockExpiredSeats, null, TimeSpan.Zero, TimeSpan.FromSeconds(10)); // Tiến hành 10s 1 lần
         return Task.CompletedTask;
     }
 

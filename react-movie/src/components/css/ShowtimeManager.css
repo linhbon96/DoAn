@@ -2,166 +2,181 @@
 
 /* Toàn bộ trang */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f8;
-  color: #333;
- 
- 
-
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
 }
 
 h1 {
-  color: #444;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+    color: #ff4500; /* Màu đỏ cam */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 /* Vùng chọn phim và nút thêm */
 .movie-selection {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
 }
 
-.movie-selection select {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #f4f4f8;
-  transition: border-color 0.3s ease;
-}
+    .movie-selection select {
+        padding: 0.5rem 1rem;
+        border: 1px solid #ff4500; /* Màu đỏ cam */
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: #fff5e6; /* Màu vàng cam nhạt */
+        transition: border-color 0.3s ease;
+    }
 
-.movie-selection select:focus {
-  outline: none;
-  border-color: #888;
-}
+        .movie-selection select:focus {
+            outline: none;
+            border-color: #ff8c00; /* Màu vàng cam */
+        }
 
 .add-showtime-button {
-  padding: 0.5rem 1.2rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    background-color: #ff4500; /* Màu đỏ cam */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.add-showtime-button:hover {
-  background-color: #555;
-}
+    .add-showtime-button:hover {
+        background-color: #ff8c00; /* Màu vàng cam */
+    }
 
 /* Bảng danh sách giờ chiếu */
 .showtime-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
 }
 
-.showtime-table th,
-.showtime-table td {
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
+    .showtime-table th,
+    .showtime-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-.showtime-table th {
-  background-color: #444;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 8px;
-}
+    .showtime-table th {
+        background-color: #ff4500; /* Màu đỏ cam */
+        color: #fff;
+        font-weight: 600;
+        border-radius: 8px;
+    }
 
-.showtime-table td {
-  color: #555;
-}
+    .showtime-table td {
+        color: #555;
+    }
 
 /* Modal */
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
-  background: #fff;
-  padding: 2rem;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content h3 {
-  color: #333;
-  margin-bottom: 1rem;
+    .modal-content h3 {
+        color: #ff4500; /* Màu đỏ cam */
+        margin-bottom: 1rem;
+    }
+
+    .modal-content label {
+        display: block;
+        color: #333;
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+    }
+
+    .modal-content input[type="date"],
+    .modal-content input[type="time"],
+    .modal-content select {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ff4500; /* Màu đỏ cam */
+        border-radius: 8px;
+        background-color: #fff5e6; /* Màu vàng cam nhạt */
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+        .modal-content input[type="date"]:focus,
+        .modal-content input[type="time"]:focus,
+        .modal-content select:focus {
+            outline: none;
+            border-color: #ff8c00; /* Màu vàng cam */
+        }
+
+    /* Nút trong modal */
+    .modal-content button[type="submit"] {
+        padding: 0.5rem 1rem;
+        background-color: #ff4500; /* Màu đỏ cam */
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .modal-content button[type="submit"]:hover {
+            background-color: #ff8c00; /* Màu vàng cam */
+        }
+
+    .modal-content button[type="button"] {
+        padding: 0.5rem 1rem;
+        background-color: #888;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .modal-content button[type="button"]:hover {
+            background-color: #aaa;
+        }
+
+/* Nút xóa */
+.delete-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff4500; /* Màu đỏ cam */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.modal-content label {
-  display: block;
-  color: #333;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-
-.modal-content input[type="date"],
-.modal-content input[type="time"],
-.modal-content select {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.modal-content input[type="date"]:focus,
-.modal-content input[type="time"]:focus,
-.modal-content select:focus {
-  outline: none;
-  border-color: #888;
-}
-
-/* Nút trong modal */
-.modal-content button[type="submit"] {
-  padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.modal-content button[type="submit"]:hover {
-  background-color: #555;
-}
-
-.modal-content button[type="button"] {
-  padding: 0.5rem 1rem;
-  background-color: #888;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.modal-content button[type="button"]:hover {
-  background-color: #aaa;
-}
+    .delete-button:hover {
+        background-color: #ff8c00; /* Màu vàng cam */
+    }

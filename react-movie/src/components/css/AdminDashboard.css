@@ -1,157 +1,200 @@
 body {
-  background-color: #f4f4f4;
-  font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
 }
 
 .search-container {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .search-input {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #FF4500; 
-  border-radius: 20px;
-  outline: none;
-  transition: all 0.3s ease;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FF4500;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-.search-input:focus {
-  box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
-}
+    .search-input:focus {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    }
 
 .add-movie-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  background-color: #FF4500; /* Màu cam đỏ */
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #FF4500; /* Màu cam đỏ */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
-.add-movie-button:hover {
-  background-color: #FF6347; /* Màu cam nhạt hơn khi hover */
-  transform: scale(1.05);
+    .add-movie-button:hover {
+        background-color: #FF6347; /* Màu cam nhạt hơn khi hover */
+        transform: scale(1.05);
+    }
+
+.movie-table-container {
+    width: 100%;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    margin-bottom: 20px;
 }
 
 .movie-table {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: white;
+    min-width: 800px; /* Đảm bảo bảng có chiều rộng tối thiểu để cuộn */
 }
 
-.movie-table th {
-  background-color: #FF4500;
-  color: white;
-  padding: 15px;
-  text-align: left;
-}
+    .movie-table th {
+        background-color: #FF4500;
+        color: white;
+        padding: 15px;
+        text-align: left;
+    }
 
-.movie-table td {
-  padding: 15px;
-  border-bottom: 1px solid #f1f1f1;
-}
+    .movie-table td {
+        padding: 15px;
+        border-bottom: 1px solid #f1f1f1;
+    }
 
-.movie-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+    .movie-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
 
 .movie-cover {
-  width: 100px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .edit-button, .delete-button {
-  background-color: #FF4500;
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background-color: #FF4500;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.edit-button:hover, .delete-button:hover {
-  background-color: #FF6347;
-  transform: scale(1.05);
-}
+    .edit-button:hover, .delete-button:hover {
+        background-color: #FF6347;
+        transform: scale(1.05);
+    }
 
 .delete-button {
-  background-color: #DC143C; /* Màu đỏ thẫm cho nút xóa */
+    background-color: #DC143C; /* Màu đỏ thẫm cho nút xóa */
 }
 
-.delete-button:hover {
-  background-color: #B22222;
-}
+    .delete-button:hover {
+        background-color: #B22222;
+    }
 
 /* Modal */
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  width: 500px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    position: relative;
 }
 
-.modal-content h2 {
-  color: #FF4500;
-  text-align: center;
-  margin-bottom: 20px;
-}
+    .modal-content h2 {
+        color: #FF4500;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #FF4500;
-  border-radius: 20px;
-  outline: none;
-}
+    .modal-content input,
+    .modal-content textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #FF4500;
+        border-radius: 20px;
+        outline: none;
+    }
 
-.modal-content input:focus,
-.modal-content textarea:focus {
-  box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
-}
+        .modal-content input:focus,
+        .modal-content textarea:focus {
+            box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+        }
 
 button[type="submit"] {
-  width: 100%;
-  padding: 12px 20px;
-  background-color: #FF4500;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 15px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
 }
 
-button[type="submit"]:hover {
-  background-color: #FF6347;
-  transform: scale(1.02);
+    button[type="submit"]:hover {
+        background-color: #FF6347;
+        transform: scale(1.02);
+    }
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
+
+    .pagination button {
+        width: min-content;
+        padding: 8px 12px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 50%;
+        background-color: #FF4500;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+    }
+
+        .pagination button:hover {
+            background-color: #FF6347;
+            transform: scale(1.05);
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+    .pagination .active {
+        background-color: #FF6347;
+        font-weight: bold;
+    }

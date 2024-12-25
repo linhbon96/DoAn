@@ -6,6 +6,7 @@ using MovieBookingApp.Models;
 using MovieBookingApp.Models.DTOs;
 using MovieBookingApp.Data;
 using System.Collections.Generic;
+using System;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -23,7 +24,7 @@ public class ShowtimesController : ControllerBase
     public async Task<IActionResult> GetShowtimes(int movieId)
     {
         var showtimes = await _context.ShowTimes
-            .Where(st => st.MovieId == movieId)
+            .Where(st => st.MovieId == movieId && st.IsActive) // Chỉ lấy các showtime đang hoạt động
             .Include(st => st.Theater)
             .Include(st => st.Movie)
             .Select(st => new ShowtimeDTO
@@ -55,7 +56,8 @@ public class ShowtimesController : ControllerBase
             MovieId = showtimeDto.MovieId,
             TheaterId = showtimeDto.TheaterId,
             ShowDate = DateTime.SpecifyKind(showtimeDto.ShowDate, DateTimeKind.Utc),
-            ShowHour = showtimeDto.ShowHour
+            ShowHour = showtimeDto.ShowHour,
+            IsActive = showtimeDto.IsActive
         };
 
         _context.ShowTimes.Add(showtime);
@@ -67,34 +69,34 @@ public class ShowtimesController : ControllerBase
     }
 
     // Khởi tạo ghế dựa trên số hàng và cột của phòng chiếu
-  private async Task InitializeSeatsForShowtime(int theaterId, int showtimeId)
-{
-    var theater = await _context.Theaters.FindAsync(theaterId);
-    if (theater == null) return;
-
-    // Kiểm tra xem đã có ghế cho lịch chiếu này chưa
-    bool seatsExist = await _context.Seats.AnyAsync(s => s.ShowTimeId == showtimeId);
-    if (seatsExist) return; // Nếu đã có ghế, không tạo thêm
-
-    var seats = new List<Seat>();
-
-    for (int row = 0; row < theater.Rows; row++)
+    private async Task InitializeSeatsForShowtime(int theaterId, int showtimeId)
     {
-        for (int col = 1; col <= theater.Columns; col++)
-        {
-            seats.Add(new Seat
-            {
-                Row = ((char)('A' + row)).ToString(), 
-                Number = col,
-                IsAvailable = true,
-                ShowTimeId = showtimeId
-            });
-        }
-    }
+        var theater = await _context.Theaters.FindAsync(theaterId);
+        if (theater == null) return;
 
-    _context.Seats.AddRange(seats);
-    await _context.SaveChangesAsync();
-}
+        // Kiểm tra xem đã có ghế cho lịch chiếu này chưa
+        bool seatsExist = await _context.Seats.AnyAsync(s => s.ShowTimeId == showtimeId);
+        if (seatsExist) return; // Nếu đã có ghế, không tạo thêm
+
+        var seats = new List<Seat>();
+
+        for (int row = 0; row < theater.Rows; row++)
+        {
+            for (int col = 1; col <= theater.Columns; col++)
+            {
+                seats.Add(new Seat
+                {
+                    Row = ((char)('A' + row)).ToString(),
+                    Number = col,
+                    IsAvailable = true,
+                    ShowTimeId = showtimeId
+                });
+            }
+        }
+
+        _context.Seats.AddRange(seats);
+        await _context.SaveChangesAsync();
+    }
 
     // Cập nhật showtime theo showtimeId
     [HttpPut("{showtimeId}")]
@@ -115,6 +117,7 @@ public class ShowtimesController : ControllerBase
         showtime.TheaterId = showtimeDto.TheaterId;
         showtime.ShowDate = DateTime.SpecifyKind(showtimeDto.ShowDate, DateTimeKind.Utc);
         showtime.ShowHour = showtimeDto.ShowHour;
+        showtime.IsActive = showtimeDto.IsActive;
 
         _context.ShowTimes.Update(showtime);
         await _context.SaveChangesAsync();
@@ -136,4 +139,24 @@ public class ShowtimesController : ControllerBase
 
         return NoContent();
     }
+
+    // Tự động ẩn lịch chiếu quá hạn
+    [HttpPost("auto-hide")]
+    public async Task<IActionResult> AutoHideExpiredShowtimes()
+    {
+        var now = DateTime.UtcNow;
+        var expiredShowtimes = await _context.ShowTimes
+            .Where(st => st.ShowDate < now.Date || (st.ShowDate == now.Date && st.ShowHour < now.TimeOfDay))
+            .ToListAsync();
+
+        foreach (var showtime in expiredShowtimes)
+        {
+            showtime.IsActive = false;
+        }
+
+        await _context.SaveChangesAsync();
+
+        return Ok(new { Message = "Expired showtimes hidden successfully." });
+    }
 }
+

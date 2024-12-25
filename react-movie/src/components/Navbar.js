@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
@@ -12,6 +12,10 @@ function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
+
+    // State quản lý menu thả xuống
+    const [showAdminMenu, setShowAdminMenu] = useState(false);
+    const [showUserMenu, setShowUserMenu] = useState(false);
 
     const handleHomeClick = () => {
         navigate('/');
@@ -70,10 +74,7 @@ function Navbar() {
                             onFocus={() => setShowDropdown(suggestions.length > 0)}
                             onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
                         />
-                        <button className="search-button" onClick={handleSearchSubmit}>🔍</button>
-                        
                     </div>
-
 
                     {showDropdown && suggestions.length > 0 && (
                         <ul className="search-dropdown">
@@ -82,7 +83,7 @@ function Navbar() {
                                     key={movie.movieId}
                                     onClick={() => handleSuggestionClick(movie.movieId)}
                                 >
-                                <img
+                                    <img
                                         src={movie.imageUrl}
                                         alt={movie.title}
                                         className="dropdown-image"
@@ -101,23 +102,43 @@ function Navbar() {
                 {!isLoggedIn && <li><a href="/login">Đăng Nhập</a></li>}
 
                 {isLoggedIn && userRole === 'Admin' && (
-                    <>
-                        <li><a href="/admin">Quản Lý</a></li>
-                        <li><a href="/showtime">Đặt Lịch Chiếu</a></li>
-                        <li><a href="/item">Quản Lý Vật Phẩm</a></li>
-                        <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
-                        
-                    </>
+                    <li
+                        className="dropdown"
+                        onMouseEnter={() => setShowAdminMenu(true)}
+                        onMouseLeave={() => setShowAdminMenu(false)}
+                    >
+                        <a href="#">Admin</a>
+                        {showAdminMenu && (
+                            <ul className="dropdown-menu">
+                                <li><a href="/admin">Quản Lý</a></li>
+                                <li><a href="/showtime">Đặt Lịch Chiếu</a></li>
+                                <li><a href="/item">Quản Lý Vật Phẩm</a></li>
+                                <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
+                                <li><a href="#" onClick={logout}>Đăng Xuất</a></li>
+                            </ul>
+                        )}
+                    </li>
                 )}
 
                 {isLoggedIn && userRole === 'User' && userId && (
-                    <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
+                    <li
+                        className="dropdown"
+                        onMouseEnter={() => setShowUserMenu(true)}
+                        onMouseLeave={() => setShowUserMenu(false)}
+                    >
+                        <a href="#">User</a>
+                        {showUserMenu && (
+                            <ul className="dropdown-menu">
+                                <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
+                                <li><a href="#" onClick={logout}>Đăng Xuất</a></li>
+                            </ul>
+                        )}
+                    </li>
                 )}
-
-                {isLoggedIn && <li><a href="#" onClick={logout}>Đăng Xuất</a></li>}
             </ul>
         </nav>
     );
 }
 
 export default Navbar;
+

@@ -22,7 +22,7 @@ namespace MovieBookingApp.Controllers
             _context = context;
         }
 
-        // GET: api/Movie
+        // GET: api/Movie Lấy danh sách phim
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MovieDTO>>> GetMovies()
         {
@@ -41,7 +41,7 @@ namespace MovieBookingApp.Controllers
             return Ok(movieDTOs);
         }
 
-        // GET: api/Movie/5
+        // GET: api/Movie/5 Lấy chi tiết phim
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieDTO>> GetMovie(int id)
         {
@@ -68,7 +68,7 @@ namespace MovieBookingApp.Controllers
             return Ok(movieDTO);
         }
 
-        // POST: api/Movie
+        // POST: api/Movie Thêm mới phim
         [HttpPost]
         public async Task<ActionResult<Movie>> CreateMovie([FromBody] MovieCreateDTO movieDTO)
         {
@@ -93,7 +93,7 @@ namespace MovieBookingApp.Controllers
             return CreatedAtAction(nameof(GetMovie), new { id = movie.MovieId }, movie);
         }
 
-        // PUT: api/Movie/5
+        // thêm thông tin phim trên movieId
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMovie(int id, [FromBody] MovieUpdateDTO movieDTO)
         {
@@ -108,7 +108,8 @@ namespace MovieBookingApp.Controllers
                 return NotFound("Phim không tồn tại.");
             }
 
-            // Update the movie's properties
+            // Cập nhật thông tin movies
+
             movie.Title = movieDTO.Title;
             movie.Description = movieDTO.Description;
             movie.Genre = movieDTO.Genre;
@@ -137,7 +138,7 @@ namespace MovieBookingApp.Controllers
             return NoContent();
         }
 
-        // GET: api/Movie/Search?query=keyword
+        // Tìm kiếm dựa trên tên phim có hỗ trợ chuẩn hoá tiếng việt
         [HttpGet("Search")]
         public async Task<IActionResult> SearchMovies(string query)
         {
@@ -164,7 +165,7 @@ namespace MovieBookingApp.Controllers
         }
 
 
-        // Hàm chuẩn hóa chuỗi tiếng Việt
+        // Hàm chuẩn hóa chuỗi tiếng Việt loại bỏ dấu để hỗ trợ khả năng tìm kiếm
         private string RemoveVietnameseTones(string str)
         {
             str = str.Normalize(NormalizationForm.FormD);
@@ -175,7 +176,7 @@ namespace MovieBookingApp.Controllers
                 .Replace("đ", "d").Replace("Đ", "D");
         }
 
-        // DELETE: api/Movie/5
+        //Xoá thông tin phim dựa trên movieId
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMovie(int id)
         {

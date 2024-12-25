@@ -1,4 +1,4 @@
-using MovieBookingApp.Data; // Namespace của ApplicationDbContext
+using MovieBookingApp.Data; 
 using MovieBookingApp.Models.DTOs;
 using MovieBookingApp.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -34,7 +34,7 @@ namespace MovieBookingApp.Controllers
                     Columns = t.Columns
                 })
                 .ToListAsync();
-
+            
             return Ok(theaters);
         }
 

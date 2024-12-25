@@ -3,7 +3,7 @@
     "",
     "\\Movie-API",
     "\\Movie-API\\Controllers",
-    "\\Movie-API\\Migrations",
+    "\\Movie-API\\Data",
     "\\Movie-API\\Models",
     "\\Movie-API\\obj",
     "\\react-movie",
@@ -11,6 +11,6 @@
     "\\react-movie\\src\\components",
     "\\react-movie\\src\\components\\css"
   ],
-  "SelectedNode": "\\Movie-API\\Controllers\\TicketController.cs",
+  "SelectedNode": "\\react-movie\\src\\components\\css\\LoginPage.css",
   "PreviewInSolutionExplorer": false
 }

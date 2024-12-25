@@ -28,7 +28,6 @@ namespace MovieBookingApp.Controllers
             {
                 return BadRequest(new { Message = "Invalid order data or missing UserId." });
             }
-
             try
             {
                 var userExists = await _context.Users.AnyAsync(u => u.UserId == orderDTO.UserId);
@@ -130,7 +129,7 @@ namespace MovieBookingApp.Controllers
                 if (seat != null)
                 {
                     seat.IsAvailable = false;
-                    seat.OrderId = orderId; // Set OrderId for the seat
+                    seat.OrderId = orderId; // Set OrderId for the Seat
                     _context.Seats.Update(seat);
                 }
             }
@@ -140,11 +139,12 @@ namespace MovieBookingApp.Controllers
 
 
 
+
         [HttpGet("{id}")]
 public async Task<IActionResult> GetOrderById(int id)
 {
     var order = await _context.Orders
-        .Include(o => o.Seats) // Include Seats
+        .Include(o => o.Seats) 
         .Include(o => o.ItemOrders)
         .ThenInclude(io => io.Item)
         .FirstOrDefaultAsync(o => o.Id == id);

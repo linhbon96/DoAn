@@ -70,7 +70,7 @@ h1{
 }
 
 .buy-ticket-button:hover {
-    background-color: #555;
+    background-color: #f75021;
 }
 
 /* Container Styles */
@@ -245,7 +245,13 @@ h1{
     font-size: 18px;
     margin: 10px;
 }
-
+.movie-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 .movie-card p {
     font-size: 14px;
     margin: 5px 10px;
@@ -256,7 +262,7 @@ h1{
     display: block;
     margin: 10px auto 15px;
     padding: 10px 15px;
-    background-color: #3498db;
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -264,7 +270,7 @@ h1{
 }
 
 .buy-ticket-button:hover {
-    background-color: #2980b9;
+    background-color: #f75021;
 }
 
 .movie-rank {

@@ -20,104 +20,101 @@ namespace MovieBookingApp.Controllers
             _context = context;
         }
 
-        // Get tickets by UserId
-[HttpGet("user/{userId}")]
-public async Task<ActionResult<IEnumerable<TicketDTO>>> GetTicketsByUser(int userId)
-{
-    var tickets = await _context.Tickets
-        .Include(t => t.Seat)
-        .Include(t => t.Showtime)
-        .ThenInclude(st => st.Movie)
-        .Where(t => t.UserId == userId)
-        .ToListAsync();
-
-    if (!tickets.Any())
-    {
-        return NotFound(new { Message = "No tickets found for this user." });
-    }
-
-    var ticketDTOs = tickets.Select(t => new TicketDTO
-    {
-        TicketId = t.TicketId,
-        ShowtimeId = t.ShowtimeId,
-        MovieTitle = t.Showtime.Movie.Title,
-        ShowDate = t.Showtime.ShowDate,
-        ShowHour = t.Showtime.ShowHour,
-        SeatId = t.SeatId,
-        Row = t.Seat.Row,
-        Number = t.Seat.Number,
-        Price = t.Price,
-        MovieId = t.Showtime.MovieId,
-        TheaterId = t.Showtime.TheaterId
-    }).ToList();
-
-    return Ok(ticketDTOs);
-}
-
-        // Create tickets
-       [HttpPost]
-public async Task<IActionResult> CreateTickets([FromBody] List<TicketCreateDTO> ticketDTOs)
-{
-    if (ticketDTOs == null || !ticketDTOs.Any())
-    {
-        return BadRequest(new { Message = "No ticket data provided." });
-    }
-
-    try
-    {
-        var newTickets = ticketDTOs.Select(dto => new Ticket
+        // Lấy thông tin vé theo userId
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<TicketDTO>>> GetTicketsByUser(int userId)
         {
-            ShowtimeId = dto.ShowtimeId,
-            SeatId = dto.SeatId,
-            Price = dto.Price,
-            MovieId = dto.MovieId, // Gửi từ frontend
-            TheaterId = dto.TheaterId, // Gửi từ frontend
-            UserId = dto.UserId // Gửi từ frontend nếu cần
-        }).ToList();
+            var tickets = await _context.Tickets
+                .Include(t => t.Seat)
+                .Include(t => t.Showtime)
+                .ThenInclude(st => st.Movie)
+                .Where(t => t.UserId == userId)
+                .ToListAsync();
 
-        _context.Tickets.AddRange(newTickets);
-        await _context.SaveChangesAsync();
+            if (!tickets.Any())
+            {
+                return NotFound(new { Message = "No tickets found for this user." });
+            }
 
-        return Ok(new { Message = "Tickets created successfully." });
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, new { Message = "Error creating tickets.", Details = ex.InnerException?.Message ?? ex.Message });
-    }
-}
+            var ticketDTOs = tickets.Select(t => new TicketDTO
+            {
+                TicketId = t.TicketId,
+                ShowtimeId = t.ShowtimeId,
+                MovieTitle = t.Showtime.Movie.Title,
+                ShowDate = t.Showtime.ShowDate,
+                ShowHour = t.Showtime.ShowHour,
+                SeatId = t.SeatId,
+                Row = t.Seat.Row,
+                Number = t.Seat.Number,
+                Price = t.Price,
+                MovieId = t.Showtime.MovieId,
+                TheaterId = t.Showtime.TheaterId
+            }).ToList();
 
+            return Ok(ticketDTOs);
+        }
 
+        // Tạo vé
+        [HttpPost]
+        public async Task<IActionResult> CreateTickets([FromBody] List<TicketCreateDTO> ticketDTOs)
+        {
+            if (ticketDTOs == null || !ticketDTOs.Any())
+            {
+                return BadRequest(new { Message = "No ticket data provided." });
+            }
 
-        // Get all tickets
+            try
+            {
+                var newTickets = ticketDTOs.Select(dto => new Ticket
+                {
+                    ShowtimeId = dto.ShowtimeId,
+                    SeatId = dto.SeatId,
+                    Price = dto.Price,
+                    MovieId = dto.MovieId, // Gửi từ frontend
+                    TheaterId = dto.TheaterId, // Gửi từ frontend
+                    UserId = dto.UserId // Gửi từ frontend nếu cần
+                }).ToList();
+
+                _context.Tickets.AddRange(newTickets);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { Message = "Tickets created successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Error creating tickets.", Details = ex.InnerException?.Message ?? ex.Message });
+            }
+        }
+
+        // Lấy thông tin toàn bộ vé
         [HttpGet]
-public async Task<ActionResult<IEnumerable<TicketDTO>>> GetAllTickets()
-{
-    var tickets = await _context.Tickets
-        .Include(t => t.Seat)
-        .Include(t => t.Showtime)
-        .ThenInclude(st => st.Movie)
-        .ToListAsync();
+        public async Task<ActionResult<IEnumerable<TicketDTO>>> GetAllTickets()
+        {
+            var tickets = await _context.Tickets
+                .Include(t => t.Seat)
+                .Include(t => t.Showtime)
+                .ThenInclude(st => st.Movie)
+                .ToListAsync();
 
-    var ticketDTOs = tickets.Select(t => new TicketDTO
-    {
-        TicketId = t.TicketId,
-        ShowtimeId = t.ShowtimeId,
-        MovieTitle = t.Showtime.Movie.Title,
-        ShowDate = t.Showtime.ShowDate,
-        ShowHour = t.Showtime.ShowHour,
-        SeatId = t.SeatId,
-        Row = t.Seat.Row,
-        Number = t.Seat.Number,
-        Price = t.Price,
-        MovieId = t.Showtime.MovieId,
-        TheaterId = t.Showtime.TheaterId
-    }).ToList();
+            var ticketDTOs = tickets.Select(t => new TicketDTO
+            {
+                TicketId = t.TicketId,
+                ShowtimeId = t.ShowtimeId,
+                MovieTitle = t.Showtime.Movie.Title,
+                ShowDate = t.Showtime.ShowDate,
+                ShowHour = t.Showtime.ShowHour,
+                SeatId = t.SeatId,
+                Row = t.Seat.Row,
+                Number = t.Seat.Number,
+                Price = t.Price,
+                MovieId = t.Showtime.MovieId,
+                TheaterId = t.Showtime.TheaterId
+            }).ToList();
 
-    return Ok(ticketDTOs);
-}
+            return Ok(ticketDTOs);
+        }
 
-
-        // Delete a ticket by ID
+        // Xoá thông tin vé theo Id
         [HttpDelete("{ticketId}")]
         public async Task<IActionResult> DeleteTicket(int ticketId)
         {

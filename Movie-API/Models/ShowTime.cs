@@ -5,6 +5,7 @@ namespace MovieBookingApp.Models
     public int ShowtimeId { get; set; }
     public int MovieId { get; set; }
     public int TheaterId { get; set; }
+    public bool IsActive { get; set; }
     public DateTime ShowDate { get; set; } // Chỉ lưu ngày
     public TimeSpan ShowHour { get; set; } // Chỉ lưu giờ
     public Theater Theater { get; set; }
