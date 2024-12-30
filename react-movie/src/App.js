@@ -12,6 +12,8 @@ import AdminDashboard from './components/AdminDashboard';
 import ShowtimeManager from './components/ShowtimeManager';
 import TicketInfo from './components/TicketInfo';
 import Item from './components/Item';
+import TheaterManager from './components/TheaterManager';
+import SalesReport from './components/SalesReport';
 import './App.css';
 import OrderSummary from './components/OrderSummary';
 
@@ -32,6 +34,8 @@ function App() {
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/showtime" element={<ShowtimeManager />} />
                     <Route path="/order" element={<OrderSummary />} />
+                    <Route path="/theaters" element={<TheaterManager />} />
+                    <Route path="/sales-report" element={<SalesReport />} />
                 </Routes>
             </AuthProvider>
         </Router>

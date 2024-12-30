@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './css/MovieList.css';
@@ -9,6 +9,7 @@ function MovieList() {
     const [error, setError] = useState(null);
     const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
     const navigate = useNavigate();
+    const titleRefs = useRef([]);
 
     useEffect(() => {
         axios.get('http://localhost:5175/api/Movie')
@@ -23,6 +24,24 @@ function MovieList() {
                 setLoading(false);
             });
     }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % Math.min(6, movies.length));
+        }, 5000); // Chuyển banner sau 5 giây
+
+        return () => clearInterval(interval);
+    }, [movies.length]);
+
+    useEffect(() => {
+        titleRefs.current.forEach((titleRef) => {
+            if (titleRef && titleRef.textContent.length > 18) {
+                titleRef.classList.add('marquee');
+            } else {
+                titleRef.classList.remove('marquee');
+            }
+        });
+    }, [movies]);
 
     const handleBannerNext = () => {
         setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % Math.min(6, movies.length)); // Quay lại phim đầu tiên
@@ -53,7 +72,7 @@ function MovieList() {
 
     return (
         <div className="movie-list-container">
-            
+
             {/* Banner Section */}
             {bannerMovies.length > 0 && (
                 <div className="banner-container">
@@ -62,6 +81,7 @@ function MovieList() {
                         className="movie-banner"
                         style={{
                             backgroundImage: `url(${bannerMovies[currentBannerIndex].imageUrl})`,
+                            transition: 'background-image 0.5s ease-in-out' // Hiệu ứng chuyển mượt mà
                         }}
                         onClick={() => handleMovieClick(bannerMovies[currentBannerIndex].movieId)}
                     >
@@ -94,8 +114,8 @@ function MovieList() {
                                 <div className="movie-rank">
                                     <span>{index + 1}</span>
                                 </div>
-                                <img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-cover"/>
-                                <h3>{movie.title}</h3>
+                                <img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-cover" />
+                                <h3 ref={(el) => (titleRefs.current[index] = el)}>{movie.title}</h3>
                                 <p><strong>Thể loại:</strong> {movie.genre}</p>
                                 <p><strong>Thời lượng:</strong> {movie.duration}</p>
                                 <p><strong>Khởi chiếu:</strong> {new Date(movie.releaseDate).toLocaleDateString()}</p>
@@ -116,3 +136,4 @@ function MovieList() {
 }
 
 export default MovieList;
+

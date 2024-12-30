@@ -8,6 +8,9 @@ function Item() {
     const [editItem, setEditItem] = useState(null); // Đối tượng đang chỉnh sửa hoặc thêm mới
     const [formData, setFormData] = useState({ name: '', price: '' });
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState(''); // Tìm kiếm theo tên món
+    const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
+    const itemsPerPage = 4; // Số lượng món trên mỗi trang
 
     useEffect(() => {
         fetchItems();
@@ -74,6 +77,7 @@ function Item() {
             try {
                 await axios.delete(`http://localhost:5175/api/Item/${itemId}`);
                 fetchItems();
+                closeModal();
             } catch (error) {
                 console.error('Error deleting item:', error);
                 setError('Failed to delete item');
@@ -81,29 +85,83 @@ function Item() {
         }
     };
 
+    // Xử lý tìm kiếm món
+    const filteredItems = items.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Tính toán số trang
+    const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+
+    // Lấy món của trang hiện tại
+    const currentItems = filteredItems.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+
     return (
         <div className="item-manager">
             <h2>Quản lý món</h2>
             {error && <p className="error-message">{error}</p>}
+
+            {/* Thanh tìm kiếm */}
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Tìm kiếm món..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="search-input"
+                />
+            </div>
+
+            {/* Nút Thêm Mới Món */}
             <button onClick={() => openModal()} className="add-item-button">Thêm món</button>
-            
-            {/* Danh sách các vật phẩm */}
+
+            {/* Thẻ danh sách món */}
             <div className="item-list">
-                {items.map(item => (
-                    <div key={item.itemId} className="item-card">
-                        <p><strong>Tên món:</strong> {item.name}</p>
-                        <p><strong>Giá:</strong> {item.price} VND</p>
-                        <button onClick={() => openModal(item)} className="edit-button">Chỉnh sửa</button>
-                        <button onClick={() => handleDelete(item.itemId)} className="delete-button">Xóa món</button>
-                    </div>
+                {currentItems.length > 0 ? (
+                    currentItems.map((item) => (
+                        <div key={item.itemId} className="item-card" onClick={() => openModal(item)}>
+                            <p><strong>Tên món:</strong> {item.name}</p>
+                            <p><strong>Giá:</strong> {item.price} VND</p>
+                        </div>
+                    ))
+                ) : (
+                    <p>Không có món nào</p>
+                )}
+            </div>
+
+            {/* Nút phân trang */}
+            <div className="pagination">
+                <button
+                    onClick={() => setCurrentPage(currentPage - 1)}
+                    disabled={currentPage === 1}
+                >
+                    Trước
+                </button>
+                {Array.from({ length: totalPages }, (_, index) => (
+                    <button
+                        key={index + 1}
+                        onClick={() => setCurrentPage(index + 1)}
+                        className={currentPage === index + 1 ? 'active' : ''}
+                    >
+                        {index + 1}
+                    </button>
                 ))}
+                <button
+                    onClick={() => setCurrentPage(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                >
+                    Sau
+                </button>
             </div>
 
             {/* Modal để thêm hoặc chỉnh sửa vật phẩm */}
             {isModalOpen && (
                 <div className="modal">
                     <div className="modal-content">
-                        <h3>{editItem ? 'Edit Item' : 'Thêm món'}</h3>
+                        <h3>{editItem ? 'Chỉnh sửa món' : 'Thêm món'}</h3>
                         <form onSubmit={handleSubmit}>
                             <label>
                                 Tên món:
@@ -125,8 +183,13 @@ function Item() {
                                     required
                                 />
                             </label>
-                            <button type="submit" className="save-button">{editItem ? 'Update' : 'Thêm'}</button>
-                            <button type="button" onClick={closeModal} className="cancel-button">Hủy</button>
+                            <div className="modal-buttons">
+                                <button type="submit" className="save-button">{editItem ? 'Cập nhật' : 'Thêm'}</button>
+                                <button type="button" onClick={closeModal} className="cancel-button">Hủy</button>
+                                {editItem && (
+                                    <button type="button" onClick={() => handleDelete(editItem.itemId)} className="delete-button">Xóa</button>
+                                )}
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -136,3 +199,4 @@ function Item() {
 }
 
 export default Item;
+

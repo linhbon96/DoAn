@@ -1,0 +1,58 @@
+﻿/* CSS cho SalesReport */
+
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+h2 {
+    color: #ff4500; /* Màu đỏ cam */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Nút xuất ra Excel */
+.export-button {
+    padding: 0.5rem 1.2rem;
+    background-color: #ff4500; /* Màu đỏ cam */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+    .export-button:hover {
+        background-color: #ff8c00; /* Màu vàng cam */
+    }
+
+/* Bảng báo cáo doanh thu */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+    .sales-table th,
+    .sales-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sales-table th {
+        background-color: #ff4500; /* Màu đỏ cam */
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .sales-table td {
+        color: #555;
+    }

@@ -52,31 +52,72 @@ h1 {
         background-color: #ff8c00; /* Màu vàng cam */
     }
 
-/* Bảng danh sách giờ chiếu */
-.showtime-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
+/* Thẻ phim */
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
 }
 
-    .showtime-table th,
-    .showtime-table td {
-        padding: 0.75rem;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .showtime-table th {
-        background-color: #ff4500; /* Màu đỏ cam */
-        color: #fff;
-        font-weight: 600;
+    .movie-card img {
+        width: 100%;
+        height: auto;
         border-radius: 8px;
     }
 
-    .showtime-table td {
-        color: #555;
+    .movie-card h3 {
+        color: #ff4500; /* Màu đỏ cam */
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
     }
+
+    .movie-card p {
+        color: #555;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+/* Container cho các thẻ phim */
+.movie-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+    .pagination button {
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        border: 1px solid #ff4500; /* Màu đỏ cam */
+        background-color: #fff;
+        color: #ff4500;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .pagination button:hover {
+            background-color: #ff4500; /* Màu đỏ cam */
+            color: #fff;
+        }
+
+        .pagination button:disabled {
+            background-color: #ddd;
+            color: #aaa;
+            cursor: not-allowed;
+        }
 
 /* Modal */
 .modal {
@@ -96,7 +137,9 @@ h1 {
     background: #fff;
     padding: 2rem;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
+    max-height: 80vh; /* Đặt chiều cao tối đa cho modal */
+    overflow-y: auto; /* Thêm thanh cuộn dọc */
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -134,10 +177,15 @@ h1 {
         }
 
     /* Nút trong modal */
-    .modal-content button[type="submit"] {
+    .modal-content .modal-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .modal-content button[type="submit"],
+    .modal-content button[type="button"] {
         padding: 0.5rem 1rem;
-        background-color: #ff4500; /* Màu đỏ cam */
-        color: #fff;
         border: none;
         border-radius: 8px;
         font-size: 1rem;
@@ -145,20 +193,18 @@ h1 {
         transition: background-color 0.3s ease;
     }
 
+    .modal-content button[type="submit"] {
+        background-color: #ff4500; /* Màu đỏ cam */
+        color: #fff;
+    }
+
         .modal-content button[type="submit"]:hover {
             background-color: #ff8c00; /* Màu vàng cam */
         }
 
     .modal-content button[type="button"] {
-        padding: 0.5rem 1rem;
         background-color: #888;
         color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        margin-left: 0.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
     }
 
         .modal-content button[type="button"]:hover {
@@ -180,3 +226,54 @@ h1 {
     .delete-button:hover {
         background-color: #ff8c00; /* Màu vàng cam */
     }
+
+/* Bảng danh sách giờ chiếu */
+.showtime-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+    .showtime-table th,
+    .showtime-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .showtime-table th {
+        background-color: #ff4500; /* Màu đỏ cam */
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .showtime-table td {
+        color: #555;
+    }
+
+/* Thẻ giờ chiếu */
+.showtime-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+    .showtime-card p {
+        color: #555;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+/* Container cho các thẻ giờ chiếu */
+.showtime-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

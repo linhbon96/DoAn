@@ -22,8 +22,10 @@ body {
     .search-input:focus {
         box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
     }
-
 .add-movie-button {
+    display: block;
+    margin: 0 auto 20px auto; 
+    width: 150px;
     padding: 10px 20px;
     font-size: 14px;
     background-color: #FF4500; /* Màu cam đỏ */
@@ -31,7 +33,6 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
@@ -73,7 +74,7 @@ body {
 
 .movie-cover {
     width: 100px;
-    height: 150px;
+    max-height: 110px;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -133,7 +134,8 @@ body {
 
     .modal-content input,
     .modal-content textarea {
-        width: 100%;
+        width: 95%;
+        height:140%;
         padding: 10px;
         margin: 10px 0;
         border: 1px solid #FF4500;

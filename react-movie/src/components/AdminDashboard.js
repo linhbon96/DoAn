@@ -144,49 +144,21 @@ function AdminDashboard() {
                 Thêm Mới
             </button>
 
-            {/* Bảng danh sách phim */}
-            <h2>Danh Sách Phim</h2>
-            <div className="movie-table-container">
-                <table className="movie-table">
-                    <thead>
-                        <tr>
-                            <th>Ảnh</th>
-                            <th>Tên Phim</th>
-                            <th>Thể Loại</th>
-                            <th>Thời Lượng</th>
-                            <th>Ngày Phát Hành</th>
-                            <th>Chỉnh Sửa</th>
-                            <th>Xóa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {currentMovies.length > 0 ? (
-                            currentMovies.map((movie) => (
-                                <tr key={movie.movieId}>
-                                    <td><img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-cover" /></td>
-                                    <td>{movie.title}</td>
-                                    <td>{movie.genre}</td>
-                                    <td>{movie.duration} phút</td>
-                                    <td>{new Date(movie.releaseDate).toLocaleDateString()}</td>
-                                    <td>
-                                        <button onClick={() => openModal(movie)} className="edit-button">
-                                            Chỉnh Sửa
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button onClick={() => handleDeleteMovie(movie.movieId)} className="delete-button">
-                                            Xóa
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="7">Không có phim nào</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
+            {/* Thẻ danh sách phim */}
+            <div className="movie-cards-container">
+                {currentMovies.length > 0 ? (
+                    currentMovies.map((movie) => (
+                        <div key={movie.movieId} className="movie-card" onClick={() => openModal(movie)}>
+                            <img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-cover" />
+                            <h3>{movie.title}</h3>
+                            <p>{movie.genre}</p>
+                            <p>{movie.duration} phút</p>
+                            <p>{new Date(movie.releaseDate).toLocaleDateString()}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p>Không có phim nào</p>
+                )}
             </div>
 
             {/* Nút phân trang */}
@@ -267,9 +239,11 @@ function AdminDashboard() {
                                     onChange={(e) => setUpdatedMovie({ ...updatedMovie, imageUrl: e.target.value })}
                                 />
                             </div>
-                            <button type="submit">Cập Nhật Phim</button>
+                            <div className="modal-buttons">
+                                <button type="submit">Cập Nhật Phim</button>
+                                <button type="button" onClick={closeModal}>Đóng</button>
+                            </div>
                         </form>
-                        <button onClick={closeModal}>Đóng</button>
                     </div>
                 </div>
             )}
@@ -327,9 +301,11 @@ function AdminDashboard() {
                                     onChange={(e) => setNewMovie({ ...newMovie, imageUrl: e.target.value })}
                                 />
                             </div>
-                            <button type="submit">Thêm Phim</button>
+                            <div className="modal-buttons">
+                                <button type="submit">Thêm Phim</button>
+                                <button type="button" onClick={closeModal}>Đóng</button>
+                            </div>
                         </form>
-                        <button onClick={closeModal}>Đóng</button>
                     </div>
                 </div>
             )}
@@ -338,4 +314,3 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
-

@@ -114,6 +114,9 @@ function Navbar() {
                                 <li><a href="/showtime">Đặt Lịch Chiếu</a></li>
                                 <li><a href="/item">Quản Lý Vật Phẩm</a></li>
                                 <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
+                                <li><a href="/theaters">Quản Lý Rạp Phım</a></li>
+                                <li><a href="/sales-report">Bảng Doanh Thu</a></li>
+                               
                                 <li><a href="#" onClick={logout}>Đăng Xuất</a></li>
                             </ul>
                         )}

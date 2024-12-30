@@ -1,13 +1,137 @@
+/* CSS cho MovieList */
+
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #ff4500; /* Màu đỏ cam */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Container Styles */
+.movie-list-container {
+    position: relative;
+    color: #180e0e; /* Để chữ dễ đọc hơn trên nền tối */
+}
+
+    .movie-list-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://nativespeaker.vn/uploaded/page_1601_1712215670_1713753865.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 70%; /* Độ mờ của ảnh nền */
+        z-index: -1;
+        background-color: rgba(96, 70, 70, 0.3);
+    }
+
+    .movie-list-container h1 {
+        color: #ffffff;
+        outline-color: #2c3e50;
+        background: #f39c12;
+    }
+
+/* Banner Section */
+.banner-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+    .banner-container h1 {
+        color: #f1f1f1;
+        background: #160d0d00;
+    }
+
+.movie-banner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: white;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.banner-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .banner-content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .banner-content .buy-ticket-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.banner-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .banner-control.prev {
+        left: 10px;
+    }
+
+    .banner-control.next {
+        right: 10px;
+    }
+
+/* Movie List Section */
 .movie-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px; 
+    gap: 20px;
     justify-content: center;
 }
-h1{
-    display: flex;
-    justify-content: center;
-}   
+
+/* Movie Card Section */
 .movie-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -19,17 +143,32 @@ h1{
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    width: 200px; /* Chiều rộng cố định của thẻ phim */
+    height: 300px; /* Chiều cao cố định của thẻ phim */
 }
 
-.movie-card:hover {
-    transform: translateY(-5px);
-}
+    .movie-card:hover {
+        transform: translateY(-5px);
+    }
 
 .movie-cover {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin: 5px 10px;
+    color: #555;
 }
 
 .showtimes {
@@ -54,9 +193,9 @@ h1{
     transition: background-color 0.3s ease;
 }
 
-.showtime-box:hover {
-    background-color: #555;
-}
+    .showtime-box:hover {
+        background-color: #555;
+    }
 
 .buy-ticket-button {
     margin-top: auto;
@@ -69,109 +208,42 @@ h1{
     transition: background-color 0.3s ease;
 }
 
-.buy-ticket-button:hover {
-    background-color: #f75021;
+    .buy-ticket-button:hover {
+        background-color: #f75021;
+    }
+
+.marquee {
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    animation: marquee 10s linear infinite;
 }
 
-/* Container Styles */
-.movie-list-container {
-    position: relative; 
-    color: #180e0e; /* Để chữ dễ đọc hơn trên nền tối */ } 
-.movie-list-container::before { 
-    content: ""; 
-    position: absolute; top: 0; left: 0; width: 100%;
-    height: 100%; 
-    background-image: url('https://nativespeaker.vn/uploaded/page_1601_1712215670_1713753865.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed;
-    opacity: 70%; /* Độ mờ của ảnh nền */
-    z-index: -1;
-    background-color: rgba(96, 70, 70, 0.3);}
-.movie-list-container .h1{
-    color: #ffffff;
-    outline-color: #2c3e50;
-    background: #f39c12;
-}
-/* Banner Section */
-.banner-container {
-    position: relative;
-    height: 400px;
-    margin-bottom: 30px;
-}
-.banner-container h1{
-    color: #f1f1f1;
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-.movie-banner {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    color: white;
-    transition: background-image 0.5s ease-in-out;
-}
-
-.banner-content {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.banner-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.banner-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.banner-content .buy-ticket-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.banner-control {
+.movie-rank {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%); 
-    background-color: rgba(0, 0, 0, 0.6);
-    border: none;
-    color: white;
-    font-size: 14px; 
-    padding: 5px; 
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-    width: 30px; 
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.banner-control.prev {
+    top: 10px;
     left: 10px;
+    background: #f39c12;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 50%;
 }
 
-.banner-control.next {
-    right: 10px;
-}
-
-/* Movie Card Section */
+/* Movie Container */
 .movie-container {
     background-image: url('D:/ThucTap/MovieTicket/Movie/react-movie/public/img/BG.jpg');
     width: 1000px; /* Chiều rộng cố định của hộp chứa */
@@ -188,21 +260,6 @@ h1{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hiển thị các cột linh hoạt */
     gap: 20px; /* Khoảng cách giữa các phim */
     justify-items: center; /* Căn giữa các phần tử trong lưới */
-}
-
-.movie-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 200px; /* Chiều rộng cố định của thẻ phim */
-    height: 300px; /* Chiều cao cố định của thẻ phim */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Căn giữa các thành phần bên trong */
 }
 
 .movie-card img {
@@ -245,6 +302,7 @@ h1{
     font-size: 18px;
     margin: 10px;
 }
+
 .movie-card img {
     width: 100%;
     height: 100px;
@@ -252,6 +310,7 @@ h1{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .movie-card p {
     font-size: 14px;
     margin: 5px 10px;
@@ -269,17 +328,6 @@ h1{
     cursor: pointer;
 }
 
-.buy-ticket-button:hover {
-    background-color: #f75021;
-}
-
-.movie-rank {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #f39c12;
-    color: white;
-    font-size: 14px;
-    padding: 5px 8px;
-    border-radius: 50%;
-}
+    .buy-ticket-button:hover {
+        background-color: #f75021;
+    }
