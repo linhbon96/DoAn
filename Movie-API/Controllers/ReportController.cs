@@ -30,7 +30,17 @@ public class ReportController : ControllerBase
                                           TotalRevenue = g.Sum(t => t.Price)
                                       }).ToListAsync();
 
-        return Ok(salesData);
+        var itemSalesData = await _context.ItemOrders
+                                          .Include(io => io.Item)
+                                          .GroupBy(io => io.Item.Name)
+                                          .Select(g => new
+                                          {
+                                              ItemName = g.Key,
+                                              QuantitySold = g.Sum(io => io.Quantity),
+                                              TotalRevenue = g.Sum(io => io.Quantity * io.Item.Price)
+                                          }).ToListAsync();
+
+        return Ok(new { MovieSales = salesData, ItemSales = itemSalesData });
     }
 
     [HttpGet("ExportToExcel")]
@@ -42,25 +52,38 @@ public class ReportController : ControllerBase
         using (var package = new ExcelPackage(stream))
         {
             var worksheet = package.Workbook.Worksheets.Add("Sales Report");
-            worksheet.Cells.LoadFromCollection(salesData, true);
+            worksheet.Cells["A1"].LoadFromCollection(salesData.MovieSales, true);
+            worksheet.Cells["D1"].LoadFromCollection(salesData.ItemSales, true);
             package.Save();
         }
         stream.Position = 0;
         return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "SalesReport.xlsx");
     }
 
-    private async Task<IEnumerable<SalesData>> GetSalesReportData()
+    private async Task<SalesReportData> GetSalesReportData()
     {
-        return await _context.Tickets
-                             .Include(t => t.Showtime)
-                             .ThenInclude(s => s.Movie)
-                             .GroupBy(t => t.Showtime.Movie.Title)
-                             .Select(g => new SalesData
-                             {
-                                 MovieTitle = g.Key,
-                                 TicketsSold = g.Count(),
-                                 TotalRevenue = g.Sum(t => t.Price)
-                             }).ToListAsync();
+        var movieSales = await _context.Tickets
+                                       .Include(t => t.Showtime)
+                                       .ThenInclude(s => s.Movie)
+                                       .GroupBy(t => t.Showtime.Movie.Title)
+                                       .Select(g => new SalesData
+                                       {
+                                           MovieTitle = g.Key,
+                                           TicketsSold = g.Count(),
+                                           TotalRevenue = g.Sum(t => t.Price)
+                                       }).ToListAsync();
+
+        var itemSales = await _context.ItemOrders
+                                      .Include(io => io.Item)
+                                      .GroupBy(io => io.Item.Name)
+                                      .Select(g => new ItemSalesData
+                                      {
+                                          ItemName = g.Key,
+                                          QuantitySold = g.Sum(io => io.Quantity),
+                                          TotalRevenue = g.Sum(io => io.Quantity * io.Item.Price)
+                                      }).ToListAsync();
+
+        return new SalesReportData { MovieSales = movieSales, ItemSales = itemSales };
     }
 }
 
@@ -70,3 +93,17 @@ public class SalesData
     public int TicketsSold { get; set; }
     public decimal TotalRevenue { get; set; }
 }
+
+public class ItemSalesData
+{
+    public string ItemName { get; set; }
+    public int QuantitySold { get; set; }
+    public decimal TotalRevenue { get; set; }
+}
+
+public class SalesReportData
+{
+    public IEnumerable<SalesData> MovieSales { get; set; }
+    public IEnumerable<ItemSalesData> ItemSales { get; set; }
+}
+

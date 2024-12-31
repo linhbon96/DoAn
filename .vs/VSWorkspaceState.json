@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Movie-API",
-    "\\Movie-API\\Controllers",
     "\\Movie-API\\Data",
+    "\\Movie-API\\DTOs",
     "\\Movie-API\\Models",
     "\\Movie-API\\obj",
     "\\react-movie",
@@ -11,6 +11,6 @@
     "\\react-movie\\src\\components",
     "\\react-movie\\src\\components\\css"
   ],
-  "SelectedNode": "\\react-movie\\src\\components\\css\\Navbar.css",
+  "SelectedNode": "\\react-movie\\src\\components\\css\\MovieList.css",
   "PreviewInSolutionExplorer": false
 }

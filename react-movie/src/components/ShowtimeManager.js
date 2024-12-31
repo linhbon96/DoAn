@@ -14,6 +14,7 @@ function ShowtimeManager() {
         showHour: '',
         theaterId: ''
     });
+    const [searchTerm, setSearchTerm] = useState(''); // Thêm state cho từ khóa tìm kiếm
     const [currentPage, setCurrentPage] = useState(1);
     const moviesPerPage = 6;
 
@@ -95,13 +96,27 @@ function ShowtimeManager() {
 
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-    const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
+    const filteredMovies = movies.filter(movie =>
+        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    const currentMovies = filteredMovies.slice(indexOfFirstMovie, indexOfLastMovie);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div>
             <h1>Quản Lý Giờ Chiếu</h1>
+
+            {/* Thanh tìm kiếm */}
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Tìm kiếm phim..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="search-input"
+                />
+            </div>
 
             <div className="movie-cards-container">
                 {currentMovies.map(movie => (
@@ -117,7 +132,7 @@ function ShowtimeManager() {
             </div>
 
             <div className="pagination">
-                {Array.from({ length: Math.ceil(movies.length / moviesPerPage) }, (_, index) => (
+                {Array.from({ length: Math.ceil(filteredMovies.length / moviesPerPage) }, (_, index) => (
                     <button
                         key={index + 1}
                         onClick={() => paginate(index + 1)}
@@ -213,5 +228,4 @@ function ShowtimeManager() {
 }
 
 export default ShowtimeManager;
-
 

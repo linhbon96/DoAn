@@ -3,7 +3,7 @@ import axios from 'axios';
 import './css/SalesReport.css';
 
 function SalesReport() {
-    const [salesData, setSalesData] = useState([]);
+    const [salesData, setSalesData] = useState({ movieSales: [], itemSales: [] });
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -45,7 +45,8 @@ function SalesReport() {
             {error && <p className="error-message">{error}</p>}
             <button onClick={exportToExcel} className="export-button">Xuất ra Excel</button>
 
-            {/* Bảng báo cáo doanh thu */}
+            {/* Bảng báo cáo doanh thu phim */}
+            <h3>Doanh thu phim</h3>
             <table className="sales-table">
                 <thead>
                     <tr>
@@ -55,10 +56,31 @@ function SalesReport() {
                     </tr>
                 </thead>
                 <tbody>
-                    {salesData.map((data, index) => (
+                    {salesData.movieSales && salesData.movieSales.map((data, index) => (
                         <tr key={index}>
                             <td>{data.movieTitle}</td>
                             <td>{data.ticketsSold}</td>
+                            <td>{data.totalRevenue} VND</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+
+            {/* Bảng báo cáo doanh thu items */}
+            <h3>Doanh thu món ăn và đồ uống</h3>
+            <table className="sales-table">
+                <thead>
+                    <tr>
+                        <th>Tên món</th>
+                        <th>Số lượng bán</th>
+                        <th>Tổng doanh thu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {salesData.itemSales && salesData.itemSales.map((data, index) => (
+                        <tr key={index}>
+                            <td>{data.itemName}</td>
+                            <td>{data.quantitySold}</td>
                             <td>{data.totalRevenue} VND</td>
                         </tr>
                     ))}
