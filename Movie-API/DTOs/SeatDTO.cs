@@ -1,4 +1,4 @@
-namespace MovieBookingApp.Models.DTOs
+﻿namespace MovieBookingApp.Models.DTOs
 {
     public class SeatDTO
     {
@@ -20,7 +20,7 @@ namespace MovieBookingApp.Models.DTOs
 
 
 
-// SeatAvailabilityResponseDto.cs
+// SeatAvailabilityResponseDto kiểm soát giá trị ghế còn trống hay không
 public class SeatAvailabilityResponseDto
 {
     public List<int> UnavailableSeats { get; set; }

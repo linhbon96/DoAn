@@ -9,7 +9,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
             refreshSeats();
         }, 30000000);
 
-        return () => clearInterval(interval); // Cleanup interval khi component unmount
+        return () => clearInterval(interval); // làm sạch khi component biến mất
     }, [refreshSeats]);
 
     const renderSeatMap = () => {

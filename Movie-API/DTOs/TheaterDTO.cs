@@ -7,7 +7,7 @@ namespace MovieBookingApp.Models.DTOs
         public string Location { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
-        public int TotalSeats => Rows * Columns; // Tính số ghế
+        public int TotalSeats => Rows * Columns; // Tính số ghế trong một rạp
     }
 
     public class TheaterCreateDTO

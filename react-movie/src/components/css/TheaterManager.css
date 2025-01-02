@@ -26,6 +26,7 @@ h2 {
     transition: background-color 0.3s ease;
     display: block;
     margin: 0 auto 1.5rem auto;
+    width: 300px;
 }
 
     .add-theater-button:hover {

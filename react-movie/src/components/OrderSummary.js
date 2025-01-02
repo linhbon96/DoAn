@@ -153,22 +153,24 @@ function OrderSummary() {
             </div>
 
             <h2>Đồ Ăn Kèm</h2>
-            <div className="item-grid">
-                {items.map((item) => (
-                    <div key={item.itemId} className="item-card">
-                        <p>{item.name} - {item.price} VND</p>
-                        <input
-                            type="number"
-                            min="0"
-                            value={
-                                selectedItems.find((selectedItem) => selectedItem.itemId === item.itemId)?.quantity || 0
-                            }
-                            onChange={(e) =>
-                                handleQuantityChange(item.itemId, parseInt(e.target.value) || 0)
-                            }
-                        />
-                    </div>
-                ))}
+            <div className="item-grid-container">
+                <div className="item-grid">
+                    {items.map((item) => (
+                        <div key={item.itemId} className="item-card">
+                            <p>{item.name} - {item.price} VND</p>
+                            <input
+                                type="number"
+                                min="0"
+                                value={
+                                    selectedItems.find((selectedItem) => selectedItem.itemId === item.itemId)?.quantity || 0
+                                }
+                                onChange={(e) =>
+                                    handleQuantityChange(item.itemId, parseInt(e.target.value) || 0)
+                                }
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <h3>Tổng Tiền: {calculateTotal()} VND</h3>

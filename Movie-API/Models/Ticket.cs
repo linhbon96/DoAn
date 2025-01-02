@@ -11,7 +11,8 @@
         public Movie Movie { get; set; }
 		public int TheaterId { get; set; }
         public Theater  Theater { get; set; }
-        // Navigation Properties
+        
+        // thuộc tính điều hướng
         public Showtime Showtime { get; set; }
         public Seat Seat { get; set; }
         public ICollection<TicketInfo> TicketInfos { get; set; }

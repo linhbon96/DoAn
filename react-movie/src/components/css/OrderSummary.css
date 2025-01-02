@@ -1,36 +1,42 @@
-.order-summary {
-    max-width: 900px;
-    margin: 20px auto;
+﻿.order-summary {
+    width: 100%;
+    height: 100vh; /* Chiều cao phủ toàn bộ trang */
+    margin: 0;
     padding: 20px;
     background: linear-gradient(to bottom, #ffcc80, #ff7043);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0; /* Loại bỏ bo tròn để phủ toàn bộ trang */
+    box-shadow: none; /* Loại bỏ bóng đổ */
     color: #333;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ẩn cuộn dọc */
 }
 
-.order-summary h1,
-.order-summary h2,
-.order-summary h3 {
-    text-align: center;
-    color: #b71c1c;
-    margin-bottom: 10px;
-}
+    .order-summary h1,
+    .order-summary h2,
+    .order-summary h3 {
+        text-align: center;
+        color: #b71c1c;
+        margin-bottom: 10px;
+    }
 
-.order-summary h1 {
-    font-size: 28px;
-    font-weight: bold;
-}
+    .order-summary h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-.order-summary h2 {
-    font-size: 22px;
-    margin-top: 20px;
-}
+    .order-summary h2 {
+        font-size: 22px;
+        margin-top: 20px;
+    }
 
-.order-summary h3 {
-    font-size: 20px;
-    margin-top: 15px;
-}
+    .order-summary h3 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
 
 .seats-list {
     display: flex;
@@ -39,21 +45,29 @@
     justify-content: center;
 }
 
-.seats-list p {
-    background-color: #ffe0b2;
-    border: 2px solid #ff5722;
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #d84315;
+    .seats-list p {
+        background-color: #ffe0b2;
+        border: 2px solid #ff5722;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #d84315;
+    }
+
+.item-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    white-space: nowrap; /* Ngăn các item-card xuống dòng */
+    width: 100%;
 }
 
 .item-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display: inline-flex; /* Hiển thị các item-card theo hàng ngang */
     gap: 20px;
-    margin-top: 20px;
 }
 
 .item-card {
@@ -64,34 +78,35 @@
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 180px; /* Đảm bảo kích thước tối thiểu cho item-card */
+    max-width: 200px; /* Đảm bảo kích thước tối đa cho item-card */
+    overflow: hidden; /* Ẩn nội dung tràn */
+    white-space: normal; /* Cho phép xuống dòng */
 }
 
-.item-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-}
+    .item-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
 
-.item-name {
-    font-weight: bold;
-    margin: 10px 0;
-    color: #e65100;
-    font-size: 16px;
-}
+    .item-card p {
+        margin: 10px 0;
+        color: #e65100;
+        font-size: 16px;
+        overflow: hidden; /* Ẩn nội dung tràn */
+        text-overflow: ellipsis; /* Thêm dấu "..." khi nội dung tràn */
+        white-space: nowrap; /* Ngăn xuống dòng */
+    }
 
-.item-price {
-    color: #bf360c;
-    font-size: 14px;
-}
-
-.item-card input {
-    width: 60px;
-    padding: 5px;
-    font-size: 14px;
-    text-align: center;
-    border: 1px solid #ffab40;
-    border-radius: 4px;
-    margin-top: 10px;
-}
+    .item-card input {
+        width: 60px;
+        padding: 5px;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #ffab40;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
 
 input[type="email"] {
     width: calc(100% - 20px);
@@ -106,19 +121,19 @@ input[type="email"] {
 .place-order-button {
     width: 100%;
     padding: 14px;
-    font-size: 18px;
+    font-size: 30px; /* Tăng kích thước font */
     color: white;
     background: linear-gradient(to right, #ff5722, #bf360c);
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 40px; /* Tăng khoảng cách trên */
     transition: background 0.3s ease-in-out;
 }
 
-.place-order-button:hover {
-    background: linear-gradient(to right, #e64a19, #b71c1c);
-}
+    .place-order-button:hover {
+        background: linear-gradient(to right, #e64a19, #b71c1c);
+    }
 
 .timer {
     font-size: 18px;
@@ -133,3 +148,23 @@ input[type="email"] {
     color: #4e342e;
     text-align: center;
 }
+
+.item-grid-control {
+    background-color: #ff7043;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+    .item-grid-control:hover {
+        background-color: #e64a19;
+    }
+
+    .item-grid-control:disabled {
+        background-color: #ffcc80;
+        cursor: not-allowed;
+    }

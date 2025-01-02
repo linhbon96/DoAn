@@ -215,8 +215,7 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-12-19T08:08:35.095Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -232,8 +231,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\css\\TheaterManager.css",
               "ViewState": "AgIAAKUAAAAAAAAAAAAmwKwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-27T09:16:19.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T09:16:19.095Z"
             },
             {
               "$type": "Document",
@@ -245,8 +243,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\AuthContext.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-25T08:02:33.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T08:02:33.173Z"
             },
             {
               "$type": "Document",
@@ -258,8 +255,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\AdminDashboard.js",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAI4AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-27T07:55:51.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T07:55:51.414Z"
             },
             {
               "$type": "Document",
@@ -271,8 +267,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\ShowtimeManager.js",
               "ViewState": "AgIAANQAAAAAAAAAAAAAAOAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-27T07:06:32.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T07:06:32.892Z"
             },
             {
               "$type": "Document",
@@ -284,8 +279,7 @@
               "RelativeToolTip": "Movie-API\\Controllers\\ReportController.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T02:27:58.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T02:27:58.429Z"
             },
             {
               "$type": "Document",
@@ -310,8 +304,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\css\\AdminDashboard.css",
               "ViewState": "AgIAAGQAAAAAAAAAAAAQwIkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-27T08:02:22.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T08:02:22.966Z"
             },
             {
               "$type": "Document",
@@ -323,8 +316,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\TheaterManager.js",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-27T09:26:31.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T09:26:31.82Z"
             },
             {
               "$type": "Document",
@@ -336,8 +328,7 @@
               "RelativeToolTip": "react-movie\\src\\components\\css\\TicketBooking.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-27T07:35:59.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T07:35:59.189Z"
             },
             {
               "$type": "Document",
@@ -349,8 +340,7 @@
               "RelativeToolTip": "Movie-API\\Controllers\\TheaterController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:51:59.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T09:51:59.336Z"
             },
             {
               "$type": "Document",
@@ -362,8 +352,7 @@
               "RelativeToolTip": "Movie-API\\MovieAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-31T02:06:37.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T02:06:37.34Z"
             },
             {
               "$type": "Document",
@@ -375,8 +364,7 @@
               "RelativeToolTip": "Movie-API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-31T02:01:09.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T02:01:09.981Z"
             },
             {
               "$type": "Document",
@@ -388,8 +376,7 @@
               "RelativeToolTip": "Movie-API\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T02:01:08.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T02:01:08.597Z"
             },
             {
               "$type": "Document",
@@ -401,8 +388,7 @@
               "RelativeToolTip": "Movie-API\\Models\\OrderRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T09:04:35.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T09:04:35.837Z"
             },
             {
               "$type": "Document",
@@ -438,8 +424,7 @@
               "RelativeToolTip": "Movie-API\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T08:54:36.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T08:54:36.51Z"
             },
             {
               "$type": "Document",

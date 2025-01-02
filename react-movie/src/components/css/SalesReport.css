@@ -17,6 +17,7 @@ h2 {
 /* Nút xuất ra Excel */
 .export-button {
     padding: 0.5rem 1.2rem;
+    width: 300px;
     background-color: #ff4500; /* Màu đỏ cam */
     color: #fff;
     border: none;

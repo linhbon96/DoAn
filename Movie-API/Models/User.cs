@@ -5,7 +5,7 @@ namespace MovieBookingApp.Models
         public int UserId { get; set; }
         public string Username { get; set; }
         public string PasswordHash { get; set; }  // Lưu trữ mật khẩu đã băm
-        public string Role { get; set; }  // e.g., "Admin" or "User"
+        public string Role { get; set; }  // phân loại người dùng "Admin"/"User"
         public ICollection<TicketInfo> TicketInfos { get; set; }
     }
 

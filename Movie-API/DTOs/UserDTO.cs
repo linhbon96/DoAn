@@ -1,10 +1,10 @@
-namespace MovieBookingApp.Models.DTOs
+﻿namespace MovieBookingApp.Models.DTOs
 {
     public class UserDTO
     {
         public int UserId { get; set; }
         public string Username { get; set; }
-        public string Role { get; set; } // e.g., "Admin" or "User"
+        public string Role { get; set; } // phân loại người dùng "Admin"/"User"
     }
 
     public class UserLoginDTO

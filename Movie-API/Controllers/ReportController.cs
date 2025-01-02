@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MovieBookingApp.Models;
 using MovieBookingApp.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -46,7 +46,7 @@ public class ReportController : ControllerBase
     [HttpGet("ExportToExcel")]
     public async Task<IActionResult> ExportToExcel()
     {
-        var salesData = await GetSalesReportData(); // Helper function to get data
+        var salesData = await GetSalesReportData(); // giúp lấy data trên db
 
         var stream = new MemoryStream();
         using (var package = new ExcelPackage(stream))
