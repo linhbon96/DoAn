@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getSalesReport, exportSalesReportToExcel } from '../services/apiService';
 import './css/SalesReport.css';
 
 function SalesReport() {
@@ -13,7 +13,7 @@ function SalesReport() {
     // Lấy dữ liệu báo cáo doanh thu từ API
     const fetchSalesData = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Report/SalesReport');
+            const response = await getSalesReport();
             setSalesData(response.data);
         } catch (error) {
             console.error('Error fetching sales data:', error);
@@ -24,9 +24,7 @@ function SalesReport() {
     // Xuất báo cáo doanh thu ra file Excel
     const exportToExcel = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Report/ExportToExcel', {
-                responseType: 'blob',
-            });
+            const response = await exportSalesReportToExcel();
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
@@ -91,4 +89,5 @@ function SalesReport() {
 }
 
 export default SalesReport;
+
 

@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { searchMovies } from '../services/apiService';
 import { useAuth } from './AuthContext';
 import './css/Navbar.css';
 
@@ -27,7 +27,7 @@ function Navbar() {
 
         if (query.length > 1) {
             try {
-                const response = await axios.get(`http://localhost:5175/api/Movie/Search?query=${query}`);
+                const response = await searchMovies(query);
                 setSuggestions(response.data);
                 setShowDropdown(true);
             } catch (error) {
@@ -116,7 +116,7 @@ function Navbar() {
                                 <li><a href={`/TicketInfo/${userId}`}>Thông Tin Vé</a></li>
                                 <li><a href="/theaters">Quản Lý Rạp Phım</a></li>
                                 <li><a href="/sales-report">Bảng Doanh Thu</a></li>
-                               
+
                                 <li><a href="#" onClick={logout}>Đăng Xuất</a></li>
                             </ul>
                         )}
@@ -144,4 +144,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

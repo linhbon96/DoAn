@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './css/LoginPage.css'; // Giả sử có file CSS riêng để định dạng giao diện
+import './css/LoginPage.css';
+import { loginUser } from '../services/apiService';
 
 const LoginPage = () => {
     const { login } = useAuth();
@@ -14,20 +15,15 @@ const LoginPage = () => {
         e.preventDefault(); // Ngăn hành động submit mặc định của form
 
         try {
-            const response = await fetch('http://localhost:5175/api/Users/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password }),
-            });
+            const response = await loginUser({ username, password });
 
-            if (response.ok) {
-                const data = await response.json();
+            if (response.status === 200) {
+                const data = response.data;
                 login(data.role, data.userId); // Lưu role và userId vào AuthContext
                 alert('Đăng nhập thành công!');
                 navigate('/'); // Chuyển hướng về trang chủ
             } else {
-                const errorData = await response.json();
-                setError(errorData.message || 'Tên đăng nhập hoặc mật khẩu không chính xác!');
+                setError(response.data.message || 'Tên đăng nhập hoặc mật khẩu không chính xác!');
             }
         } catch (error) {
             console.error('Error during login:', error);
@@ -72,3 +68,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+

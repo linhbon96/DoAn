@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { getItems, createOrderAndTickets } from '../services/apiService';
 import { useAuth } from './AuthContext';
 import './css/OrderSummary.css';
 
@@ -30,7 +30,7 @@ function OrderSummary() {
 
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Item');
+            const response = await getItems();
             setItems(response.data);
 
             // Đặt giá trị mặc định cho selectedItems
@@ -120,7 +120,7 @@ function OrderSummary() {
 
         try {
             setIsLoading(true);
-            const response = await axios.post('http://localhost:5175/api/Orders/CreateOrderAndTickets', orderData);
+            const response = await createOrderAndTickets(orderData);
 
             alert(`Đặt vé thành công! Mã đơn hàng: ${response.data.id}`);
             navigate('/');
@@ -193,3 +193,5 @@ function OrderSummary() {
 }
 
 export default OrderSummary;
+
+

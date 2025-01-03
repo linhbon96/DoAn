@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { registerUser } from '../services/apiService';
 import './css/Auth.css';  // Đảm bảo rằng bạn đã tạo tệp CSS này để có giao diện nhất quán
 
 function Register() {
@@ -19,7 +19,7 @@ function Register() {
         }
 
         try {
-            await axios.post('http://localhost:5175/api/Users/register', { username, password, confirmPassword });
+            await registerUser({ username, password, confirmPassword });
             navigate('/login');  // Chuyển hướng về trang đăng nhập sau khi đăng ký thành công
         } catch (err) {
             setError('Failed to register. Please try again.');
@@ -66,3 +66,4 @@ function Register() {
 }
 
 export default Register;
+

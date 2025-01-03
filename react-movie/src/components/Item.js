@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import './css/Item.css';
+import { getItems, createItem, updateItem, deleteItem } from '../services/apiService';
 
 function Item() {
     const [items, setItems] = useState([]);
@@ -19,7 +19,7 @@ function Item() {
     // Lấy danh sách vật phẩm từ API
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Item');
+            const response = await getItems();
             setItems(response.data);
         } catch (error) {
             console.error('Error fetching items:', error);
@@ -58,10 +58,10 @@ function Item() {
         try {
             if (editItem) {
                 // Cập nhật vật phẩm
-                await axios.put(`http://localhost:5175/api/Item/${editItem.itemId}`, formData);
+                await updateItem(editItem.itemId, formData);
             } else {
                 // Thêm vật phẩm mới
-                await axios.post('http://localhost:5175/api/Item', formData);
+                await createItem(formData);
             }
             fetchItems();
             closeModal();
@@ -75,7 +75,7 @@ function Item() {
     const handleDelete = async (itemId) => {
         if (window.confirm('Are you sure you want to delete this item?')) {
             try {
-                await axios.delete(`http://localhost:5175/api/Item/${itemId}`);
+                await deleteItem(itemId);
                 fetchItems();
                 closeModal();
             } catch (error) {

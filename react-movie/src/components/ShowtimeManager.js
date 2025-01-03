@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getMovies, getTheaters, getShowtimesByMovieId, createShowtime, deleteShowtime } from '../services/apiService';
 import './css/ShowtimeManager.css';
 
 function ShowtimeManager() {
@@ -31,7 +31,7 @@ function ShowtimeManager() {
 
     const fetchMovies = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Movie');
+            const response = await getMovies();
             const sortedMovies = Array.isArray(response.data) ? response.data.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)) : [];
             setMovies(sortedMovies);
         } catch (error) {
@@ -41,7 +41,7 @@ function ShowtimeManager() {
 
     const fetchTheaters = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Theater');
+            const response = await getTheaters();
             setTheaters(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error('Error fetching theaters:', error);
@@ -50,7 +50,7 @@ function ShowtimeManager() {
 
     const fetchShowtimes = async (movieId) => {
         try {
-            const response = await axios.get(`http://localhost:5175/api/ShowTimes/${movieId}`);
+            const response = await getShowtimesByMovieId(movieId);
             setShowtimes(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error('Error fetching showtimes:', error);
@@ -73,7 +73,7 @@ function ShowtimeManager() {
         };
 
         try {
-            const response = await axios.post('http://localhost:5175/api/ShowTimes', showtimeData);
+            const response = await createShowtime(showtimeData);
             if (response.status === 201) {
                 fetchShowtimes(selectedMovie.movieId);
                 setIsAddShowtimeModalOpen(false);
@@ -87,7 +87,7 @@ function ShowtimeManager() {
     const handleDeleteShowtime = async (showtimeId) => {
         if (!window.confirm('Bạn có chắc muốn xóa giờ chiếu này không?')) return;
         try {
-            await axios.delete(`http://localhost:5175/api/ShowTimes/${showtimeId}`);
+            await deleteShowtime(showtimeId);
             fetchShowtimes(selectedMovie.movieId);
         } catch (error) {
             console.error('Error deleting showtime:', error);
@@ -228,4 +228,3 @@ function ShowtimeManager() {
 }
 
 export default ShowtimeManager;
-

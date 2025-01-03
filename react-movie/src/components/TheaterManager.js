@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getTheaters, createTheater, updateTheater, deleteTheater } from '../services/apiService';
 import './css/TheaterManager.css';
 
 function TheaterManager() {
@@ -16,7 +16,7 @@ function TheaterManager() {
     // Lấy danh sách phòng chiếu từ API
     const fetchTheaters = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Theater');
+            const response = await getTheaters();
             setTheaters(response.data);
         } catch (error) {
             console.error('Error fetching theaters:', error);
@@ -55,10 +55,10 @@ function TheaterManager() {
         try {
             if (editTheater) {
                 // Cập nhật phòng chiếu
-                await axios.put(`http://localhost:5175/api/Theater/${editTheater.theaterId}`, formData);
+                await updateTheater(editTheater.theaterId, formData);
             } else {
                 // Thêm phòng chiếu mới
-                await axios.post('http://localhost:5175/api/Theater', formData);
+                await createTheater(formData);
             }
             fetchTheaters();
             closeModal();
@@ -72,7 +72,7 @@ function TheaterManager() {
     const handleDelete = async (theaterId) => {
         if (window.confirm('Are you sure you want to delete this theater?')) {
             try {
-                await axios.delete(`http://localhost:5175/api/Theater/${theaterId}`);
+                await deleteTheater(theaterId);
                 fetchTheaters();
             } catch (error) {
                 console.error('Error deleting theater:', error);
@@ -160,4 +160,5 @@ function TheaterManager() {
 }
 
 export default TheaterManager;
+
 

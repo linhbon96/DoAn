@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { getMovieById, getShowtimesByMovieId } from '../services/apiService';
 import './css/MovieDetail.css';
 
 function MovieDetail() {
@@ -16,7 +16,7 @@ function MovieDetail() {
     useEffect(() => {
         if (movieId) {
             // Lấy dữ liệu phim
-            axios.get(`http://localhost:5175/api/Movie/${movieId}`)
+            getMovieById(movieId)
                 .then(response => {
                     setMovie(response.data);
                     setError(null);
@@ -29,7 +29,7 @@ function MovieDetail() {
                 });
 
             // Lấy dữ liệu giờ chiếu liên quan đến phim
-            axios.get(`http://localhost:5175/api/ShowTimes/${movieId}`)
+            getShowtimesByMovieId(movieId)
                 .then(response => {
                     setShowtimes(response.data);
                 })
@@ -46,7 +46,7 @@ function MovieDetail() {
     const uniqueDates = Array.from(new Set(showtimes.map(showtime => new Date(showtime.showDate).toLocaleDateString())));
 
     // Lọc giờ chiếu theo ngày đã chọn
-    const filteredShowtimes = showtimes.filter(showtime => 
+    const filteredShowtimes = showtimes.filter(showtime =>
         selectedDate && new Date(showtime.showDate).toLocaleDateString() === selectedDate
     );
 
@@ -64,7 +64,7 @@ function MovieDetail() {
             navigate(`/ticketbooking`, { state: { movieId: movie.movieId, showtime: selectedShowtime } });
         }
     };
-    
+
 
     if (loading) {
         return <div className="loading">Loading...</div>;
@@ -82,62 +82,64 @@ function MovieDetail() {
         <div className="movie-detail">
             <div className="movie-info">
                 <h2 className="movie-title">{movie.title}</h2>
-                <img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-image"/>
+                <img src={movie.imageUrl} alt={`${movie.title} cover`} className="movie-image" />
                 <p><strong></strong> {movie.description}</p>
                 <p><strong>Thể loại:</strong> {movie.genre}</p>
                 <p><strong>Thời lượng:</strong> {movie.duration} minutes</p>
                 <p><strong>Ngày phát hành:</strong> {new Date(movie.releaseDate).toLocaleDateString()}</p>
             </div>
-           
 
-           <div className="allbutton">
-               {/* Chọn ngày chiếu */}
-               <div className="date-selection">
-                   <label><strong>Chọn lịch chiếu:</strong></label>
-                   <div className="date-boxes">
-                       {uniqueDates.map(date => (
-                           <button
-                               key={date}
-                               className={`date-box ${selectedDate === date ? 'selected' : ''}`}
-                               onClick={() => handleDateSelect(date)}
-                           >
-                               {date}
-                           </button>
-                       ))}
-                   </div>
-               </div>
-               {/* Hiển thị giờ chiếu của ngày đã chọn */}
-               {selectedDate && (
-                   <div className="showtime-list">
-                       <label><strong>Suất chiếu trong ngày {selectedDate}:</strong></label>
-                       <div className="showtime-boxes">
-                           {filteredShowtimes.length > 0 ? (
-                               filteredShowtimes.map(showtime => (
-                                   <button
-                                       key={showtime.showtimeId}
-                                       className={`showtime-box ${selectedShowtime === showtime ? 'selected' : ''}`}
-                                       onClick={() => handleShowtimeSelect(showtime)}
-                                   >
-                                       {showtime.showHour.slice(0, 5)} {/* Chỉ hiển thị giờ */}
-                                   </button>
-                               ))
-                           ) : (
-                               <p>Không có lịch chiếu hiện hoạt</p>
-                           )}
-                       </div>
-                   </div>
-               )}
 
-               <button
-                   onClick={handleBookTicket}
-                   disabled={!selectedShowtime}
-                   className={`book-button ${selectedShowtime ? 'active' : ''}`}
-               >
-                   Đặt vé
-               </button>
-           </div>
+            <div className="allbutton">
+                {/* Chọn ngày chiếu */}
+                <div className="date-selection">
+                    <label><strong>Chọn lịch chiếu:</strong></label>
+                    <div className="date-boxes">
+                        {uniqueDates.map(date => (
+                            <button
+                                key={date}
+                                className={`date-box ${selectedDate === date ? 'selected' : ''}`}
+                                onClick={() => handleDateSelect(date)}
+                            >
+                                {date}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                {/* Hiển thị giờ chiếu của ngày đã chọn */}
+                {selectedDate && (
+                    <div className="showtime-list">
+                        <label><strong>Suất chiếu trong ngày {selectedDate}:</strong></label>
+                        <div className="showtime-boxes">
+                            {filteredShowtimes.length > 0 ? (
+                                filteredShowtimes.map(showtime => (
+                                    <button
+                                        key={showtime.showtimeId}
+                                        className={`showtime-box ${selectedShowtime === showtime ? 'selected' : ''}`}
+                                        onClick={() => handleShowtimeSelect(showtime)}
+                                    >
+                                        {showtime.showHour.slice(0, 5)} {/* Chỉ hiển thị giờ */}
+                                    </button>
+                                ))
+                            ) : (
+                                <p>Không có lịch chiếu hiện hoạt</p>
+                            )}
+                        </div>
+                    </div>
+                )}
+
+                <button
+                    onClick={handleBookTicket}
+                    disabled={!selectedShowtime}
+                    className={`book-button ${selectedShowtime ? 'active' : ''}`}
+                >
+                    Đặt vé
+                </button>
+            </div>
         </div>
     );
 }
 
 export default MovieDetail;
+
+

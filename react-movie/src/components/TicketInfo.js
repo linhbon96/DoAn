@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getTicketInfoByUserId } from '../services/apiService';
 import './css/TicketInfo.css';
 
 function TicketInfo() {
@@ -18,7 +18,7 @@ function TicketInfo() {
 
         const fetchTicketInfos = async () => {
             try {
-                const response = await axios.get(`http://localhost:5175/api/TicketInfo/user/${userId}`);
+                const response = await getTicketInfoByUserId(userId);
                 setTicketInfos(response.data);
             } catch (error) {
                 console.error('Error fetching ticket info:', error);
@@ -85,3 +85,4 @@ function TicketInfo() {
 }
 
 export default TicketInfo;
+

@@ -7,9 +7,9 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
         // Tự động làm mới ghế sau mỗi 30 giây
         const interval = setInterval(() => {
             refreshSeats();
-        }, 30000000);
+        }, 30000); // 30 giây
 
-        return () => clearInterval(interval); // làm sạch khi component biến mất
+        return () => clearInterval(interval); // làm sạch khi component biến mất
     }, [refreshSeats]);
 
     const renderSeatMap = () => {
@@ -27,8 +27,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
                 seatRow.push(
                     <button
                         key={`${row}-${col}`}
-                        className={`seat ${
-                            seat
+                        className={`seat ${seat
                                 ? isLocked
                                     ? 'locked'  // Ghế khóa sẽ có màu đỏ
                                     : seat.isAvailable
@@ -37,7 +36,7 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
                                             : 'available'
                                         : 'booked'
                                 : 'empty'
-                        }`}
+                            }`}
                         onClick={() => seat && toggleSeatSelection(seat)}
                         disabled={!seat || !seat.isAvailable || isLocked}
                     >
@@ -50,7 +49,6 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
         return seatRows;
     };
 
-
     return (
         <div className="seat-map">
             <h2 className="screen-label">Màn Hình</h2>
@@ -60,3 +58,5 @@ function SeatMap({ rows, columns, seats, toggleSeatSelection, selectedSeats, ref
 }
 
 export default SeatMap;
+
+

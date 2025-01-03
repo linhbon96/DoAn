@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { getTheaterById, getSeatsByShowtimeId, checkSeats } from '../services/apiService';
 import SeatMap from './SeatMap';
 import './css/TicketBooking.css';
 
@@ -28,7 +28,7 @@ function TicketBooking() {
 
     const fetchTheaterInfo = async (theaterId) => {
         try {
-            const response = await axios.get(`http://localhost:5175/api/Theater/${theaterId}`);
+            const response = await getTheaterById(theaterId);
             setTheaterInfo(response.data);
         } catch (error) {
             console.error('Error fetching theater info:', error);
@@ -38,7 +38,7 @@ function TicketBooking() {
 
     const fetchSeats = async (showtimeId) => {
         try {
-            const response = await axios.get(`http://localhost:5175/api/Seats/${showtimeId}`);
+            const response = await getSeatsByShowtimeId(showtimeId);
             const updatedSeats = response.data.map((seat) => {
                 return {
                     ...seat,
@@ -51,7 +51,6 @@ function TicketBooking() {
             alert('Không thể tải danh sách ghế. Vui lòng thử lại!');
         }
     };
-
 
     const toggleSeatSelection = (seat) => {
         setSelectedSeats((prev) =>
@@ -71,7 +70,7 @@ function TicketBooking() {
 
         try {
             // Gửi danh sách ghế đã chọn lên backend để kiểm tra trạng thái
-            const response = await axios.post('http://localhost:5175/api/Seats/CheckSeats', {
+            const response = await checkSeats({
                 showtimeId: showtime.showtimeId,
                 seatIds: selectedSeats.map((seat) => seat.seatId),
             });
@@ -142,3 +141,4 @@ function TicketBooking() {
 }
 
 export default TicketBooking;
+

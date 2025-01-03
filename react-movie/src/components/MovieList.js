@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import './css/MovieList.css';
+import { getMovies } from '../services/apiService';
 
 function MovieList() {
     const [movies, setMovies] = useState([]);
@@ -12,7 +12,7 @@ function MovieList() {
     const titleRefs = useRef([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5175/api/Movie')
+        getMovies()
             .then(response => {
                 const sortedMovies = response.data.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)); // Sắp xếp theo ngày phát hành mới nhất
                 setMovies(sortedMovies);

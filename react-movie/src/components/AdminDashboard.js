@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getMovies, createMovie, updateMovie, deleteMovie } from '../services/apiService';
 import './css/AdminDashboard.css';
 
 function AdminDashboard() {
@@ -34,7 +34,7 @@ function AdminDashboard() {
     // Fetch danh sách phim từ API
     const fetchMovies = async () => {
         try {
-            const response = await axios.get('http://localhost:5175/api/Movie');
+            const response = await getMovies();
             setMovies(response.data);
         } catch (error) {
             console.error('Error fetching movies:', error);
@@ -66,10 +66,7 @@ function AdminDashboard() {
     const handleUpdateMovie = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(
-                `http://localhost:5175/api/Movie/${selectedMovie.movieId}`,
-                updatedMovie
-            );
+            const response = await updateMovie(selectedMovie.movieId, updatedMovie);
 
             if (response.status === 200) {
                 fetchMovies(); // Cập nhật lại danh sách phim
@@ -84,7 +81,7 @@ function AdminDashboard() {
     const handleAddMovie = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5175/api/Movie', newMovie);
+            const response = await createMovie(newMovie);
             if (response.status === 201) {
                 fetchMovies(); // Cập nhật lại danh sách phim
                 closeModal();  // Đóng modal thêm mới
@@ -99,7 +96,7 @@ function AdminDashboard() {
         const confirmDelete = window.confirm("Bạn có chắc muốn xóa phim này?");
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`http://localhost:5175/api/Movie/${movieId}`);
+                const response = await deleteMovie(movieId);
                 if (response.status === 200) {
                     fetchMovies(); // Cập nhật lại danh sách phim sau khi xóa
                 }
@@ -314,3 +311,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+

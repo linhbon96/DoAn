@@ -1,4 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
+import { getShowtimesByMovieId, getTheaterById, createOrderAndTickets } from '../services/apiService';
 import './css/BookingPage.css';
 
 function BookingPage() {
@@ -17,8 +18,8 @@ function BookingPage() {
     const fetchShowtimeData = async () => {
         // Gọi API để lấy dữ liệu (cần URL API thực tế)
         try {
-            const response = await fetch('/api/showtime/0'); // Thay 0 bằng showtimeId thực tế
-            const data = await response.json();
+            const response = await getShowtimesByMovieId(0); // Thay 0 bằng showtimeId thực tế
+            const data = response.data;
             setShowtime(data.showtime);
             setTheater(data.theater);
             setMovie(data.movie);
@@ -42,7 +43,7 @@ function BookingPage() {
         setSnacks([...snacks, snack]);
     };
 
-    const handlePayment = () => {
+    const handlePayment = async () => {
         const totalPrice = calculateTotalPrice();
         const payload = {
             ticketId: 0,
@@ -55,23 +56,16 @@ function BookingPage() {
             totalPrice: totalPrice,
             snacks: snacks,
         };
-        
-        // Gửi yêu cầu thanh toán tới API (cần URL thực tế)
-        fetch('/api/payment', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Thanh toán thành công!');
-            // Xử lý thêm nếu cần sau khi thanh toán
-        })
-        .catch(error => {
+
+        try {
+            const response = await createOrderAndTickets(payload);
+            if (response.status === 200) {
+                alert('Thanh toán thành công!');
+                // Xử lý thêm nếu cần sau khi thanh toán
+            }
+        } catch (error) {
             console.error('Lỗi khi thanh toán:', error);
-        });
+        }
     };
 
     const calculateTotalPrice = () => {
@@ -132,3 +126,4 @@ function BookingPage() {
 }
 
 export default BookingPage;
+
