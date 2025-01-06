@@ -4,7 +4,6 @@ import { AuthProvider } from './components/AuthContext';
 import Navbar from './components/Navbar';
 import MovieList from './components/MovieList';
 import MovieDetail from './components/MovieDetail';
-import BookingPage from './components/BookingPage';
 import TicketBooking from './components/TicketBooking';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -16,7 +15,7 @@ import TheaterManager from './components/TheaterManager';
 import SalesReport from './components/SalesReport';
 import './App.css';
 import OrderSummary from './components/OrderSummary';
-
+    
 function App() {
     return (
         <Router>
@@ -25,7 +24,6 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MovieList />} />
                     <Route path="/movie/:movieId" element={<MovieDetail />} />
-                    <Route path="/book/:showtimeId" element={<BookingPage />} />
                     <Route path="/ticketbooking" element={<TicketBooking />} />
                     <Route path="/ticketinfo/:userId" element={<TicketInfo />} />
                     <Route path="/item" element={<Item />} />

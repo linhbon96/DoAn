@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/MovieList.css';
-import { getMovies } from '../services/apiService';
+import { getMovies } from '../services/apiService'; //goi hàm getMovies tu apiService
 
 function MovieList() {
     const [movies, setMovies] = useState([]);
